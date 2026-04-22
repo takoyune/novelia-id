@@ -89,9 +89,10 @@ export default class ReaderView {
                         <i class="fas fa-list"></i> Index
                     </a>
                     
-                    <a href="${this.nextChapter ? `#/novel/${this.novel.id}/${this.nextChapter.id}` : '#'}" 
-                       class="btn btn-outline ${!this.nextChapter ? 'opacity-50 cursor-not-allowed pointer-events-none' : ''}">
-                        <span class="hidden sm:inline mr-2">Next</span> <i class="fas fa-chevron-right"></i>
+                    <a href="${this.nextChapter ? `#/novel/${this.novel.id}/${this.nextChapter.id}` : `#/novel/${this.novel.id}`}" 
+                       class="btn btn-outline">
+                        <span class="hidden sm:inline mr-2">${this.nextChapter ? 'Next' : 'Finish'}</span> 
+                        <i class="fas ${this.nextChapter ? 'fa-chevron-right' : 'fa-check-circle'}"></i>
                     </a>
                 </footer>
 
@@ -239,7 +240,11 @@ export default class ReaderView {
                 if (this.prevChapter) router.navigate(`/novel/${this.novel.id}/${this.prevChapter.id}`);
                 break;
             case 'ArrowRight':
-                if (this.nextChapter) router.navigate(`/novel/${this.novel.id}/${this.nextChapter.id}`);
+                if (this.nextChapter) {
+                    router.navigate(`/novel/${this.novel.id}/${this.nextChapter.id}`);
+                } else {
+                    router.navigate(`/novel/${this.novel.id}`);
+                }
                 break;
             case 'Escape':
                 router.navigate(`/novel/${this.novel.id}`);
