@@ -13,7 +13,7 @@ import { getDatabase, ref, runTransaction, onValue, get, set } from "https://www
 const firebaseConfig = {
   apiKey: atob("QUl6YVN5RG5vbHQ4YkZXZ3RiU2RraW1GM2FGR0U1bFFzR0FCN2Fj"),
   authDomain: "noveliaid-21bb5.firebaseapp.com",
-  databaseURL: "https://noveliaid-21bb5-default-rtdb.firebaseio.com",
+  databaseURL: "https://noveliaid-21bb5-default-rtdb.asia-southeast1.firebasedatabase.app",
   projectId: "noveliaid-21bb5",
   storageBucket: "noveliaid-21bb5.firebasestorage.app",
   messagingSenderId: "47062132880",
