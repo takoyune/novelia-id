@@ -18,16 +18,27 @@ export function renderFilterSidebar(containerId, initialFilters) {
 
     let html = `<div class="filter-sidebar">`;
 
-    // Genres
+    // Genres — Custom friendly dropdown
+    const selectedCount = initialFilters.genres.length;
+    const btnLabel = selectedCount > 0 ? `${selectedCount} Genre Dipilih` : 'Pilih Genre...';
     html += `
         <div class="filter-group mb-6">
             <span class="filter-title block mb-2 font-bold">Genres</span>
-            <select id="genre-select" class="sort-select text-sm w-full" multiple size="4" style="padding-top: 0.5rem;">
-                ${genres.map(g => `
-                    <option value="${g}" ${initialFilters.genres.includes(g) ? 'selected' : ''}>${g}</option>
-                `).join('')}
-            </select>
-            <p class="text-xs text-muted mt-2"><i class="fas fa-info-circle"></i> Tahan Ctrl/Cmd untuk memilih banyak (PC) atau tap ganda (HP)</p>
+            <div class="custom-multiselect" id="genre-dropdown-wrapper">
+                <button type="button" class="sort-select text-sm w-full flex justify-between items-center" id="genre-dropdown-btn" aria-expanded="false" aria-haspopup="listbox">
+                    <span id="genre-btn-label">${btnLabel}</span>
+                    <i class="fas fa-chevron-down text-xs transition-transform" id="genre-chevron"></i>
+                </button>
+                <div class="genre-dropdown-panel" id="genre-dropdown-panel" role="listbox" aria-multiselectable="true" style="display:none;">
+                    ${genres.map((g, i) => `
+                        <label class="genre-option-label" for="genre-opt-${i}">
+                            <input type="checkbox" id="genre-opt-${i}" class="genre-checkbox" name="genre" value="${g}" ${initialFilters.genres.includes(g) ? 'checked' : ''}>
+                            <span class="genre-option-check"><i class="fas fa-check"></i></span>
+                            ${g}
+                        </label>
+                    `).join('')}
+                </div>
+            </div>
         </div>
     `;
 
@@ -60,4 +71,39 @@ export function renderFilterSidebar(containerId, initialFilters) {
 
     html += `</div>`;
     container.innerHTML = html;
+
+    // --- Dropdown toggle logic (self-contained) ---
+    const btn = document.getElementById('genre-dropdown-btn');
+    const panel = document.getElementById('genre-dropdown-panel');
+    const chevron = document.getElementById('genre-chevron');
+    const btnLabelEl = document.getElementById('genre-btn-label');
+
+    function updateBtnLabel() {
+        const checked = panel.querySelectorAll('.genre-checkbox:checked');
+        btnLabelEl.textContent = checked.length > 0 ? `${checked.length} Genre Dipilih` : 'Pilih Genre...';
+    }
+
+    function togglePanel(open) {
+        const isOpen = open !== undefined ? open : panel.style.display === 'none';
+        panel.style.display = isOpen ? 'block' : 'none';
+        btn.setAttribute('aria-expanded', String(isOpen));
+        chevron.style.transform = isOpen ? 'rotate(180deg)' : '';
+    }
+
+    btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        togglePanel();
+    });
+
+    // Close on outside click
+    document.addEventListener('click', (e) => {
+        if (!document.getElementById('genre-dropdown-wrapper')?.contains(e.target)) {
+            togglePanel(false);
+        }
+    });
+
+    // Update label when checkbox changes — bubble up to home.js
+    panel.addEventListener('change', () => {
+        updateBtnLabel();
+    });
 }

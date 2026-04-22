@@ -121,11 +121,12 @@ export default class HomeView {
     bindFilterEvents() {
         const sidebar = document.getElementById('filter-sidebar-root');
         
-        // Multi-select Dropdown (Genres)
-        const genreSelect = sidebar.querySelector('#genre-select');
-        if (genreSelect) {
-            genreSelect.addEventListener('change', () => {
-                const selected = Array.from(genreSelect.selectedOptions).map(opt => opt.value);
+        // Custom multi-select dropdown (Genres)
+        const genrePanel = sidebar.querySelector('#genre-dropdown-panel');
+        if (genrePanel) {
+            genrePanel.addEventListener('change', () => {
+                const selected = Array.from(genrePanel.querySelectorAll('.genre-checkbox:checked'))
+                    .map(cb => cb.value);
                 store.setNestedState('filters', 'genres', selected);
                 this.updateUrl();
             });
