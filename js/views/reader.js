@@ -53,6 +53,9 @@ export default class ReaderView {
 
         return `
             <div class="reader-wrapper">
+                <!-- Reading Progress Bar -->
+                <div id="reading-progress" class="reading-progress-bar" style="width: 0%;"></div>
+
                 <!-- Sticky Header -->
                 <header class="reader-header">
                     <a href="#/novel/${this.novel.id}" class="btn text-sm hover:text-accent">
@@ -158,6 +161,7 @@ export default class ReaderView {
 
         this.initSettingsModal();
         this.bindKeyboardEvents();
+        this.initProgressBar();
     }
 
     initSettingsModal() {
@@ -222,6 +226,22 @@ export default class ReaderView {
         });
     }
 
+    initProgressBar() {
+        const progressBar = document.getElementById('reading-progress');
+        if (!progressBar) return;
+
+        const updateProgress = () => {
+            const scrollTop = window.scrollY;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const percent = docHeight > 0 ? Math.min((scrollTop / docHeight) * 100, 100) : 0;
+            progressBar.style.width = `${percent}%`;
+        };
+
+        window.addEventListener('scroll', updateProgress, { passive: true });
+        this._cleanupProgress = () => window.removeEventListener('scroll', updateProgress);
+        updateProgress();
+    }
+
     bindKeyboardEvents() {
         document.addEventListener('keydown', this.handleKeyDown);
     }
@@ -254,6 +274,7 @@ export default class ReaderView {
 
     destroy() {
         if (this.unsubscribeStore) this.unsubscribeStore();
+        if (this._cleanupProgress) this._cleanupProgress();
         document.removeEventListener('keydown', this.handleKeyDown);
         if (this.cleanupFocusTrap) this.cleanupFocusTrap();
         

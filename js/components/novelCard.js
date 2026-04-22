@@ -15,6 +15,7 @@ export function renderNovelCard(novel) {
     }
 
     const badgeClass = novel.status === 'Ongoing' ? 'status-ongoing' : 'status-completed';
+    const chapterCount = novel.chapters ? novel.chapters.length : 0;
 
     return `
         <a href="#/novel/${novel.id}" class="novel-card group">
@@ -22,6 +23,7 @@ export function renderNovelCard(novel) {
                 <img src="${novel.cover}" alt="Cover of ${novel.title}" class="card-image" loading="lazy">
                 <div class="card-overlay"></div>
                 <div class="status-badge ${badgeClass}">${novel.status}</div>
+                <div class="card-chapter-count"><i class="fas fa-book-open"></i> ${chapterCount} Ch</div>
             </div>
             <div class="card-content">
                 <h3 class="card-title">${novel.title}</h3>

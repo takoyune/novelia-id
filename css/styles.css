@@ -324,6 +324,10 @@ img {
 }
 @media (min-width: 768px) { .search-bar { display: block; } }
 
+/* Mobile search toggle: show on mobile, hide on desktop */
+.md-hidden-btn { display: flex; }
+@media (min-width: 768px) { .md-hidden-btn { display: none; } }
+
 .search-input {
     width: 100%;
     padding: 0.5rem 1rem 0.5rem 2.5rem;
@@ -1080,5 +1084,185 @@ img {
     margin-top: 4rem;
 }
 
+/* ==========================================================================
+   UX Polish
+   ========================================================================== */
+
+/* Page fade-in animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.app-container > *:first-child {
+    animation: fadeInUp 0.35s ease-out;
+}
+
+/* Scroll-to-top button */
+.scroll-to-top {
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    width: 2.75rem;
+    height: 2.75rem;
+    border-radius: 50%;
+    background-color: var(--accent);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow-lg);
+    cursor: pointer;
+    z-index: 90;
+    opacity: 0;
+    transform: translateY(10px);
+    pointer-events: none;
+    transition: all 0.3s ease;
+    border: none;
+    font-size: 1rem;
+}
+.scroll-to-top.visible {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+.scroll-to-top:hover {
+    background-color: var(--accent-hover);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-card-hover);
+}
+
+/* Reading progress bar */
+.reading-progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--accent), var(--accent-hover));
+    z-index: 999;
+    transition: width 0.1s ease-out;
+    border-radius: 0 2px 2px 0;
+}
+
+/* Mobile search overlay */
+.mobile-search-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4rem;
+    background-color: var(--bg-overlay);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+    gap: 0.75rem;
+    z-index: 60;
+    animation: fadeInUp 0.2s ease-out;
+}
+.mobile-search-overlay .search-input {
+    flex: 1;
+}
+
+/* Donation banner (proper vanilla CSS) */
+.donation-banner {
+    background-color: var(--accent-light);
+    border: 1px solid var(--accent);
+    border-radius: var(--radius-xl);
+    padding: 1rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    text-align: center;
+}
+@media (min-width: 768px) {
+    .donation-banner {
+        flex-direction: row;
+        text-align: left;
+    }
+}
+.donation-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1.25rem;
+    background-color: #E2B02A;
+    color: #333;
+    border: none;
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+.donation-btn:hover {
+    background-color: #d4a526;
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+}
+
+/* Chapter count badge on novel card */
+.card-chapter-count {
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+    padding: 0.2rem 0.5rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px);
+    z-index: 10;
+}
+
+/* Ads skip button disabled state */
+.skip-btn-disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+
+/* Transition helpers */
+.transition-transform { transition: transform 0.2s ease; }
+.transition-colors { transition: color 0.2s ease, background-color 0.2s ease; }
+.w-full { width: 100%; }
+.text-center { text-align: center; }
+.shrink-0 { flex-shrink: 0; }
+.relative { position: relative; }
+.sticky { position: sticky; }
+.top-20 { top: 5rem; }
+.mr-2 { margin-right: 0.5rem; }
+.ml-2 { margin-left: 0.5rem; }
+.mb-1 { margin-bottom: 0.25rem; }
+.mb-2 { margin-bottom: 0.5rem; }
+.mb-3 { margin-bottom: 0.75rem; }
+.mb-6 { margin-bottom: 1.5rem; }
+.p-2 { padding: 0.5rem; }
+.p-4 { padding: 1rem; }
+.p-6 { padding: 1.5rem; }
+.pb-8 { padding-bottom: 2rem; }
+.pt-8 { padding-top: 2rem; }
+.py-12 { padding-top: 3rem; padding-bottom: 3rem; }
+.min-w-0 { min-width: 0; }
+.flex-1 { flex: 1; }
+.whitespace-pre-line { white-space: pre-line; }
+.cursor-pointer { cursor: pointer; }
+.opacity-50 { opacity: 0.5; }
+.border-t { border-top: 1px solid var(--border-color); }
+
 /* Utility hiding */
 .hidden { display: none !important; }
+

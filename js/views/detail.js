@@ -50,8 +50,8 @@ export default class DetailView {
                             ${this.novel.genres.map(g => `<span class="genre-tag">${g}</span>`).join('')}
                         </div>
 
-                        <div class="flex gap-4 mt-6">
-                            <a href="#/novel/${this.novel.id}/${this.novel.chapters[0].id}" class="btn btn-primary">
+                        <div class="flex gap-4 mt-6" style="flex-wrap: wrap;">
+                            <a href="#/novel/${this.novel.id}/${this._getResumeChapter().id}" class="btn btn-primary">
                                 <i class="fas fa-book-reader"></i> ${readCount > 0 ? 'Continue Reading' : 'Start Reading'}
                             </a>
                             <button id="bookmark-btn" class="btn btn-outline" aria-pressed="${isBookmarked}">
@@ -177,6 +177,18 @@ export default class DetailView {
                 viewCountEl.textContent = new Intl.NumberFormat().format(views || 0);
             }
         });
+    }
+
+    _getResumeChapter() {
+        const readProgress = store.getState('readProgress');
+        // Find the first unread chapter
+        for (const ch of this.novel.chapters) {
+            if (!readProgress[`${this.novel.id}_${ch.id}`]) {
+                return ch;
+            }
+        }
+        // All chapters read — go to last chapter
+        return this.novel.chapters[this.novel.chapters.length - 1];
     }
 
     renderChapterList() {
