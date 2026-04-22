@@ -63,51 +63,61 @@ export default class DetailView {
                 </div>
             </div>
 
-            <div class="container pb-8 grid grid-cols-1 lg:grid-cols-3 gap-8">
-                <!-- Main Content -->
-                <div class="lg:col-span-2">
-                    <div class="synopsis-container">
-                        <h2 class="text-xl font-bold mb-4">Synopsis</h2>
-                        <div id="synopsis-content" class="synopsis-text collapsed text-secondary whitespace-pre-line">
-                            ${this.novel.synopsis}
+            <div class="container pb-8">
+                <!-- Info Stats Bar (horizontal, full width) -->
+                <div class="detail-stats-bar mb-8">
+                    <div class="stat-item">
+                        <i class="fas fa-book-open text-accent"></i>
+                        <div>
+                            <span class="stat-value">${totalCh}</span>
+                            <span class="stat-label">Chapters</span>
                         </div>
-                        <button id="toggle-synopsis" class="toggle-synopsis">Show More</button>
                     </div>
-
-                    <div id="chapter-list-section">
-                        <div class="chapter-list-header">
-                            <h2 class="text-xl font-bold">Chapters <span class="text-sm font-normal text-muted ml-2">(${readCount}/${totalCh} read)</span></h2>
-                            <button id="sort-chapters" class="btn btn-outline btn-sm text-sm py-1 px-2">
-                                <i class="fas fa-sort-numeric-down"></i> Oldest First
-                            </button>
+                    <div class="stat-item">
+                        <i class="fas fa-eye text-accent"></i>
+                        <div>
+                            <span id="view-count" class="stat-value"><i class="fas fa-spinner fa-spin text-xs"></i></span>
+                            <span class="stat-label">Views</span>
                         </div>
-                        
-                        <div id="chapter-grid" class="chapter-grid">
-                            <!-- Chapters injected here -->
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-clock text-accent"></i>
+                        <div>
+                            <span class="stat-value">${new Date(this.novel.lastUpdated).toLocaleDateString()}</span>
+                            <span class="stat-label">Last Updated</span>
+                        </div>
+                    </div>
+                    <div class="stat-item">
+                        <i class="fas fa-check-circle text-accent"></i>
+                        <div>
+                            <span class="stat-value">${readCount}/${totalCh}</span>
+                            <span class="stat-label">Read</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- Sidebar Info -->
-                <aside>
-                    <div class="filter-sidebar">
-                        <h3 class="font-bold mb-4 border-b border-color pb-2" style="border-bottom-color: var(--border-color);">Information</h3>
-                        <ul class="flex flex-col gap-3 text-sm">
-                            <li class="flex justify-between">
-                                <span class="text-muted">Chapters</span>
-                                <span class="font-medium">${totalCh}</span>
-                            </li>
-                            <li class="flex justify-between">
-                                <span class="text-muted">Views</span>
-                                <span id="view-count" class="font-medium text-accent"><i class="fas fa-spinner fa-spin text-xs"></i></span>
-                            </li>
-                            <li class="flex justify-between">
-                                <span class="text-muted">Last Updated</span>
-                                <span class="font-medium">${new Date(this.novel.lastUpdated).toLocaleDateString()}</span>
-                            </li>
-                        </ul>
+                <!-- Synopsis (full width) -->
+                <div class="synopsis-container mb-8">
+                    <h2 class="text-xl font-bold mb-4">Synopsis</h2>
+                    <div id="synopsis-content" class="synopsis-text collapsed text-secondary whitespace-pre-line">
+                        ${this.novel.synopsis}
                     </div>
-                </aside>
+                    <button id="toggle-synopsis" class="toggle-synopsis">Show More</button>
+                </div>
+
+                <!-- Chapters (full width) -->
+                <div id="chapter-list-section">
+                    <div class="chapter-list-header">
+                        <h2 class="text-xl font-bold">Chapters</h2>
+                        <button id="sort-chapters" class="btn btn-outline btn-sm text-sm py-1 px-2">
+                            <i class="fas fa-sort-numeric-down"></i> Oldest First
+                        </button>
+                    </div>
+                    
+                    <div id="chapter-grid" class="chapter-grid">
+                        <!-- Chapters injected here -->
+                    </div>
+                </div>
             </div>
         `;
     }
