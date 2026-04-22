@@ -601,37 +601,44 @@ img {
 }
 
 .slide-cover {
-    width: 180px;
+    width: 100px; /* Mobile: small cover */
     border-radius: var(--radius-md);
     box-shadow: var(--shadow-lg);
     flex-shrink: 0;
-    display: none;
+    display: block; /* Always visible! */
 }
-@media (min-width: 768px) { .slide-cover { display: block; } }
+@media (min-width: 768px) { .slide-cover { width: 180px; } }
 
 .slide-info h2 {
-    font-size: 1.5rem; /* Mobile font size */
+    font-size: 1.25rem; /* Mobile font size */
     font-weight: 700;
     margin-bottom: 0.5rem;
     line-height: 1.2;
-}
-@media (min-width: 768px) {
-    .slide-info h2 { font-size: 2.5rem; }
-}
-
-.slide-info p {
-    font-size: 0.875rem; /* Mobile font size */
-    opacity: 0.8;
-    margin-bottom: 1rem;
     display: -webkit-box;
-    -webkit-line-clamp: 3;
+    -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
 @media (min-width: 768px) {
-    .slide-info p { 
-        font-size: 1rem; 
+    .slide-info h2 { 
+        font-size: 2.5rem; 
+        -webkit-line-clamp: unset;
+    }
+}
+
+/* Hide synopsis on mobile */
+.slide-synopsis {
+    display: none;
+}
+@media (min-width: 768px) {
+    .slide-synopsis {
+        display: -webkit-box;
+        font-size: 1rem;
+        opacity: 0.8;
         margin-bottom: 1.5rem;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
     }
 }
 
@@ -1013,6 +1020,41 @@ img {
 .filter-group { margin-bottom: 1.5rem; }
 .filter-group:last-child { margin-bottom: 0; }
 .filter-title { font-weight: 600; margin-bottom: 0.75rem; display: block; }
+
+/* Collapsible filter on mobile */
+.filter-toggle-btn {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0;
+    background: none;
+    border: none;
+    color: var(--text-primary);
+    font-weight: 700;
+    font-size: 1rem;
+    cursor: pointer;
+    font-family: inherit;
+    margin-bottom: 0;
+}
+.filter-toggle-btn i:last-child {
+    transition: transform 0.2s ease;
+}
+.filter-content {
+    display: none;
+    margin-top: 1rem;
+}
+.filter-content.filter-open {
+    display: block;
+}
+/* Desktop: always show content, hide toggle */
+@media (min-width: 1024px) {
+    .filter-toggle-btn { display: none; }
+    .filter-content {
+        display: block !important;
+        margin-top: 0;
+    }
+}
 
 .checkbox-label, .radio-label {
     display: flex;

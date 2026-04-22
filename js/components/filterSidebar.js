@@ -16,7 +16,13 @@ export function renderFilterSidebar(containerId, initialFilters) {
     const statuses = ["All", "Ongoing", "Completed"];
     const sorts = ["Latest Update", "A-Z", "Top Rated"];
 
-    let html = `<div class="filter-sidebar">`;
+    let html = `<div class="filter-sidebar">
+        <!-- Mobile toggle button -->
+        <button type="button" class="filter-toggle-btn" id="filter-toggle-btn">
+            <span><i class="fas fa-sliders-h"></i> Filter & Sort</span>
+            <i class="fas fa-chevron-down" id="filter-toggle-chevron"></i>
+        </button>
+        <div class="filter-content" id="filter-content">`;
 
     // Genres — Custom friendly dropdown
     const selectedCount = initialFilters.genres.length;
@@ -69,8 +75,18 @@ export function renderFilterSidebar(containerId, initialFilters) {
         </div>
     `;
 
-    html += `</div>`;
+    html += `</div></div>`; // close filter-content and filter-sidebar
     container.innerHTML = html;
+
+    // --- Mobile filter toggle ---
+    const filterToggleBtn = document.getElementById('filter-toggle-btn');
+    const filterContent = document.getElementById('filter-content');
+    const filterChevron = document.getElementById('filter-toggle-chevron');
+
+    filterToggleBtn.addEventListener('click', () => {
+        const isOpen = filterContent.classList.toggle('filter-open');
+        filterChevron.style.transform = isOpen ? 'rotate(180deg)' : '';
+    });
 
     // --- Dropdown toggle logic (self-contained) ---
     const btn = document.getElementById('genre-dropdown-btn');

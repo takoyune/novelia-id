@@ -30,7 +30,7 @@ export class Carousel {
                         <img src="${item.cover}" alt="Cover" class="slide-cover">
                         <div class="slide-info">
                             <h2>${item.title}</h2>
-                            <p>${shortSynopsis}</p>
+                            <p class="slide-synopsis">${shortSynopsis}</p>
                             <a href="#/novel/${item.id}" class="btn btn-primary">
                                 <i class="fas fa-book-reader"></i> Read Now
                             </a>
