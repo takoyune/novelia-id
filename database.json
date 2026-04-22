@@ -270,10 +270,95 @@
           "date": "2026-04-22"
         }
       ]
+    },
+    {
+      "id": "Death-Flag",
+      "title": "Death Flag-ku Nggak Ada Habisnya",
+      "cover": "assets/covers/Death-Flag.jpg",
+      "author": "泉 (Izumi)",
+      "artist": "Aちき",
+      "year": "2011",
+      "translator": "Novelia ID Team",
+      "rating": 4.5,
+      "genres": [
+        "Action",
+        "Adventure",
+        "Fantasy",
+        "Romance",
+        "Adventure",
+        "Fantasy",
+        "Drama",
+        "Shounen"
+      ],
+      "status": "Ongoing",
+      "synopsis": "",
+      "lastUpdated": "2026-04-22T23:24:00Z",
+      "chapters": [
+        {
+          "id": "ch-1",
+          "title": "",
+          "index": 1,
+          "date": "2026-04-22"
+        },
+        {
+          "id": "ch-2",
+          "title": "",
+          "index": 2,
+          "date": "2026-04-22"
+        },
+        {
+          "id": "ch-3",
+          "title": "",
+          "index": 3,
+          "date": "2026-04-22"
+        },
+        {
+          "id": "ch-4",
+          "title": "",
+          "index": 4,
+          "date": "2026-04-22"
+        },
+        {
+          "id": "ch-5",
+          "title": "",
+          "index": 5,
+          "date": "2026-04-22"
+        },
+        {
+          "id": "ch-6",
+          "title": "",
+          "index": 6,
+          "date": "2026-04-22"
+        },
+        {
+          "id": "ch-7",
+          "title": "",
+          "index": 7,
+          "date": "2026-04-22"
+        },
+        {
+          "id": "ch-8",
+          "title": "",
+          "index": 8,
+          "date": "2026-04-22"
+        },
+        {
+          "id": "ch-9",
+          "title": "",
+          "index": 9,
+          "date": "2026-04-22"
+        },
+        {
+          "id": "ch-10",
+          "title": "",
+          "index": 10,
+          "date": "2026-04-22"
+        }
+      ]
     }
   ],
   "meta": {
-    "totalNovels": 5,
-    "lastUpdated": "2026-04-22T23:24:00Z"
+    "totalNovels": 6,
+    "lastUpdated": "2026-04-22T15:51:33.586Z"
   }
 }

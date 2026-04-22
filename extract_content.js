@@ -33,6 +33,13 @@ db.novels.forEach(novel => {
     }
 });
 
+// Auto-update metadata
+db.meta = {
+    totalNovels: db.novels.length,
+    lastUpdated: new Date().toISOString()
+};
+
 // Write updated DB back
 fs.writeFileSync(dbPath, JSON.stringify(db, null, 2), 'utf8');
-console.log('Successfully updated database.json');
+console.log('Successfully updated database.json (including metadata)');
+
