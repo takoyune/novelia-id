@@ -1,8 +1,18 @@
+import { store } from '../store.js';
+
 export function renderFilterSidebar(containerId, initialFilters) {
     const container = document.getElementById(containerId);
     if (!container) return;
 
-    const genres = ["Action", "Fantasy", "Romance", "Isekai", "Sci-Fi", "Horror", "Drama", "Dark Fantasy"];
+    // Dynamically extract unique genres from the database
+    const allNovels = store.getState('novels') || [];
+    const genreSet = new Set();
+    allNovels.forEach(novel => {
+        if (novel.genres && Array.isArray(novel.genres)) {
+            novel.genres.forEach(g => genreSet.add(g));
+        }
+    });
+    const genres = Array.from(genreSet).sort();
     const statuses = ["All", "Ongoing", "Completed"];
     const sorts = ["Latest Update", "A-Z", "Top Rated"];
 
@@ -10,13 +20,13 @@ export function renderFilterSidebar(containerId, initialFilters) {
 
     // Genres
     html += `
-        <div class="filter-group">
-            <span class="filter-title">Genres</span>
-            <div class="flex flex-col gap-2">
+        <div class="filter-group mb-6">
+            <span class="filter-title block mb-3 font-bold">Genres</span>
+            <div class="scroll-container">
                 ${genres.map(g => `
-                    <label class="checkbox-label text-sm">
-                        <input type="checkbox" name="genre" value="${g}" ${initialFilters.genres.includes(g) ? 'checked' : ''}>
-                        ${g}
+                    <label class="relative cursor-pointer shrink-0">
+                        <input type="checkbox" name="genre" value="${g}" class="chip-checkbox" ${initialFilters.genres.includes(g) ? 'checked' : ''}>
+                        <span class="filter-chip">${g}</span>
                     </label>
                 `).join('')}
             </div>

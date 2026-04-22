@@ -932,6 +932,50 @@ img {
     transform: translateY(0);
 }
 
+/* Filter Chips / Pills */
+.scroll-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 0.5rem;
+    padding-bottom: 0.5rem;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+.scroll-container::-webkit-scrollbar {
+    display: none; /* Chrome, Safari and Opera */
+}
+
+.filter-chip {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-xl);
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.2s ease;
+    user-select: none;
+}
+.filter-chip:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+/* Hide the actual checkbox */
+.chip-checkbox {
+    display: none;
+}
+
+/* Style the label when checkbox is checked */
+.chip-checkbox:checked + .filter-chip {
+    background-color: var(--accent);
+    color: white;
+    border-color: var(--accent);
+}
+
 .settings-group {
     margin-bottom: 1.5rem;
 }
