@@ -71,15 +71,12 @@ export default class HomeView {
         
         const carouselRoot = document.getElementById('carousel-root');
         if (!hasFilters && allNovels.length >= 3) {
-            // Show loading state
-            carouselRoot.innerHTML = '<div class="container"><div class="carousel-container flex justify-center items-center h-64"><i class="fas fa-spinner fa-spin text-3xl text-accent"></i></div></div>';
-            
-            // Fetch views and sort
-            const viewsMap = await getAllNovelViews();
-            const topViewed = [...allNovels].sort((a, b) => (viewsMap[b.id] || 0) - (viewsMap[a.id] || 0)).slice(0, 3);
+            // Pick 3 random novels
+            const shuffled = [...allNovels].sort(() => 0.5 - Math.random());
+            const randomTop = shuffled.slice(0, 3);
             
             carouselRoot.innerHTML = '<div class="container"><div id="hero-carousel" class="carousel-container"></div></div>';
-            this.carousel = new Carousel('hero-carousel', topViewed);
+            this.carousel = new Carousel('hero-carousel', randomTop);
         } else {
             carouselRoot.innerHTML = '<div class="mt-8"></div>'; // Spacing
         }
