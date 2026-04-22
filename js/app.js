@@ -10,6 +10,7 @@ import HomeView from './views/home.js';
 import DetailView from './views/detail.js';
 import ReaderView from './views/reader.js';
 import AdsView from './views/ads.js';
+import { initFirebase } from './utils/firebase.js';
 
 class App {
     constructor() {
@@ -17,6 +18,9 @@ class App {
     }
 
     async init() {
+        // 0. Initialize Backend Services
+        initFirebase();
+
         // 1. Initialize Theme
         initThemeManager();
 

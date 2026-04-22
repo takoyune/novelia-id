@@ -1,6 +1,7 @@
 import { store } from '../store.js';
 import { updateMetaTags } from '../utils/seo.js';
 import { announce } from '../utils/a11y.js';
+import { incrementNovelViews, subscribeToNovelViews } from '../utils/firebase.js';
 
 export default class DetailView {
     constructor(params) {
@@ -8,6 +9,7 @@ export default class DetailView {
         this.novel = store.getState('novels').find(n => n.id === this.novelId);
         this.sortOrder = 'asc'; // 'asc' = Oldest First, 'desc' = Newest First
         this.unsubscribeStore = null;
+        this.unsubscribeViews = null;
     }
 
     async render() {
@@ -97,7 +99,7 @@ export default class DetailView {
                             </li>
                             <li class="flex justify-between">
                                 <span class="text-muted">Views</span>
-                                <span class="font-medium">1.2M</span>
+                                <span id="view-count" class="font-medium text-accent"><i class="fas fa-spinner fa-spin text-xs"></i></span>
                             </li>
                             <li class="flex justify-between">
                                 <span class="text-muted">Last Updated</span>
@@ -165,6 +167,16 @@ export default class DetailView {
             this.renderChapterList();
             announce(`Chapters sorted ${this.sortOrder === 'asc' ? 'oldest' : 'newest'} first`);
         });
+
+        // Real-time Views
+        incrementNovelViews(this.novel.id);
+        this.unsubscribeViews = subscribeToNovelViews(this.novel.id, (views) => {
+            const viewCountEl = document.getElementById('view-count');
+            if (viewCountEl) {
+                // Format to something like 1,234
+                viewCountEl.textContent = new Intl.NumberFormat().format(views || 0);
+            }
+        });
     }
 
     renderChapterList() {
@@ -198,6 +210,9 @@ export default class DetailView {
     destroy() {
         if (this.unsubscribeStore) {
             this.unsubscribeStore();
+        }
+        if (this.unsubscribeViews) {
+            this.unsubscribeViews();
         }
     }
 }
