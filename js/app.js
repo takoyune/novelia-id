@@ -107,9 +107,9 @@ class App {
             store.incrementClick();
             
             const count = store.getState('clickCount');
-            const shouldShowAd = (Math.random() < 0.025) || (count >= 120);
+            const shouldShowAd = (Math.random() < 0.05) || (count >= 200);
             
-            console.log(`Ad Check: Count=${count}/120, Chance=2.5% -> Triggered=${shouldShowAd}`);
+            console.log(`Ad Check: Count=${count}/200, Chance=5% -> Triggered=${shouldShowAd}`);
             
             if (shouldShowAd) {
                 // Prevent the normal click action (e.g. following the link)

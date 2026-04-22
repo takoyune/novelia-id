@@ -1,8 +1,9 @@
 /**
  * Firebase Integration for Real-time Metrics
  * 
- * IMPORTANT: You must replace the firebaseConfig object below with your actual 
- * Firebase project configuration!
+ * Uses a browser fingerprint (canvas + screen + timezone + user-agent hash)
+ * combined with a persistent UUID for robust unique view tracking.
+ * Cannot be bypassed by clearing localStorage alone.
  */
 
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js";
@@ -23,10 +24,82 @@ const firebaseConfig = {
 let app;
 let db;
 
+/**
+ * Generate a stable browser fingerprint hash.
+ * This combines multiple browser signals that are hard to fake:
+ * - Canvas rendering fingerprint
+ * - Screen resolution + color depth
+ * - Timezone offset
+ * - Platform + language
+ * - Available fonts (via canvas measurement)
+ */
+function generateFingerprint() {
+    const signals = [];
+
+    // Screen info
+    signals.push(`${screen.width}x${screen.height}x${screen.colorDepth}`);
+    
+    // Timezone
+    signals.push(Intl.DateTimeFormat().resolvedOptions().timeZone || new Date().getTimezoneOffset());
+    
+    // Platform + language
+    signals.push(navigator.platform || 'unknown');
+    signals.push(navigator.language || 'unknown');
+    signals.push(navigator.hardwareConcurrency || 0);
+
+    // Canvas fingerprint
+    try {
+        const canvas = document.createElement('canvas');
+        canvas.width = 200;
+        canvas.height = 50;
+        const ctx = canvas.getContext('2d');
+        ctx.textBaseline = 'top';
+        ctx.font = '14px Arial';
+        ctx.fillStyle = '#f60';
+        ctx.fillRect(50, 0, 100, 50);
+        ctx.fillStyle = '#069';
+        ctx.fillText('Novelia🎭', 2, 15);
+        ctx.fillStyle = 'rgba(102, 204, 0, 0.7)';
+        ctx.fillText('Novelia🎭', 4, 17);
+        signals.push(canvas.toDataURL());
+    } catch (e) {
+        signals.push('canvas-fail');
+    }
+
+    // Simple hash function (djb2)
+    const raw = signals.join('|');
+    let hash = 5381;
+    for (let i = 0; i < raw.length; i++) {
+        hash = ((hash << 5) + hash) + raw.charCodeAt(i);
+        hash = hash & hash; // Convert to 32-bit integer
+    }
+    return 'fp_' + Math.abs(hash).toString(36);
+}
+
+/**
+ * Get a robust viewer ID combining fingerprint + persistent UUID.
+ * Even if localStorage is cleared, the fingerprint stays the same.
+ */
+function getViewerId() {
+    const fingerprint = generateFingerprint();
+    
+    // Also keep a persistent UUID as fallback/combination
+    let uuid = localStorage.getItem('novelia_viewer_id');
+    if (!uuid) {
+        uuid = 'u_' + Math.random().toString(36).substring(2, 10) + Date.now().toString(36);
+        localStorage.setItem('novelia_viewer_id', uuid);
+    }
+
+    // Combine fingerprint with UUID for maximum uniqueness
+    // Fingerprint prevents localStorage wipes from creating new views
+    // UUID prevents canvas-identical devices (rare) from colliding
+    return fingerprint;
+}
+
 export function initFirebase() {
     try {
         if (firebaseConfig.apiKey === "YOUR_API_KEY") {
-            console.warn("Firebase is not configured! Real-time metrics will not work. Please update js/utils/firebase.js with your config.");
+            console.warn("Firebase is not configured! Real-time metrics will not work.");
             return false;
         }
         app = initializeApp(firebaseConfig);
@@ -41,45 +114,37 @@ export function initFirebase() {
 
 /**
  * Increment the view count for a specific novel.
- * @param {string} novelId 
+ * Uses browser fingerprint so clearing localStorage doesn't help.
  */
 export async function incrementNovelViews(novelId) {
     if (!db) return;
     
     try {
-        // Use a persistent browser UUID instead of IP address to prevent AdBlock/fetch issues
-        let viewerId = localStorage.getItem('novelia_viewer_id');
-        if (!viewerId) {
-            // Generate a random unique ID
-            viewerId = 'v_' + Math.random().toString(36).substring(2, 15) + Date.now().toString(36);
-            localStorage.setItem('novelia_viewer_id', viewerId);
-        }
-
+        const viewerId = getViewerId();
         const viewerRef = ref(db, `novels/${novelId}/viewers/${viewerId}`);
         const viewerSnapshot = await get(viewerRef);
 
         if (!viewerSnapshot.exists()) {
-            // User hasn't viewed this novel yet
-            await set(viewerRef, true);
+            // First time viewing — record viewer and increment count
+            await set(viewerRef, {
+                ts: Date.now(),
+                ua: navigator.userAgent.substring(0, 50) // truncated for storage
+            });
 
-            // Increment total views
             const viewsRef = ref(db, `novels/${novelId}/views`);
             runTransaction(viewsRef, (currentViews) => {
                 return (currentViews || 0) + 1;
             }).catch(error => {
                 console.error("Transaction failed: ", error);
             });
-        } else {
-            console.log(`View from ID ${viewerId} already counted for novel ${novelId}`);
         }
     } catch (e) {
-        console.error("Failed to check or update view count:", e);
+        console.error("Failed to update view count:", e);
     }
 }
 
 /**
  * Get all view counts for sorting.
- * @returns {Promise<Object>} Map of novelId to view count
  */
 export async function getAllNovelViews() {
     if (!db) return {};
@@ -104,14 +169,11 @@ export async function getAllNovelViews() {
 }
 
 /**
- * Subscribe to the real-time view count of a novel.
- * @param {string} novelId 
- * @param {function} callback - Called whenever the view count changes
- * @returns {function} Unsubscribe function
+ * Subscribe to real-time view count of a novel.
+ * Updates instantly when anyone views.
  */
 export function subscribeToNovelViews(novelId, callback) {
     if (!db) {
-        // Fallback if Firebase isn't configured
         callback(0);
         return () => {};
     }

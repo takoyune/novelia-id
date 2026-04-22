@@ -65,8 +65,8 @@ export default class AdsView {
                             <span id="countdown-text" class="text-xl font-bold text-primary">${this.timeLeft}</span>
                         </div>
 
-                        <button id="skip-btn" class="btn btn-outline skip-btn-disabled" disabled>
-                            Tunggu ${this.timeLeft}s...
+                        <button id="skip-btn" class="btn btn-outline">
+                            Skip
                         </button>
                     </div>
                 </div>
@@ -86,8 +86,6 @@ export default class AdsView {
         const totalTime = 10;
         const totalDash = 176;
 
-        const skipWait = 5; // seconds before skip is allowed
-
         this.timer = setInterval(() => {
             this.timeLeft--;
             
@@ -99,24 +97,13 @@ export default class AdsView {
                 progressCircle.style.strokeDashoffset = offset;
             }
 
-            // Enable skip button after 5 seconds
-            if (this.timeLeft <= (totalTime - skipWait) && skipBtn) {
-                skipBtn.disabled = false;
-                skipBtn.classList.remove('skip-btn-disabled');
-                skipBtn.textContent = 'Skip';
-            } else if (skipBtn) {
-                skipBtn.textContent = `Tunggu ${this.timeLeft - (totalTime - skipWait)}s...`;
-            }
-
             if (this.timeLeft <= 0) {
                 this.finish();
             }
         }, 1000);
 
         if (skipBtn) {
-            skipBtn.addEventListener('click', () => {
-                if (!skipBtn.disabled) this.finish();
-            });
+            skipBtn.addEventListener('click', () => this.finish());
         }
     }
 
