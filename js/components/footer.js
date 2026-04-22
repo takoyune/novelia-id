@@ -2,6 +2,15 @@ export function renderFooter() {
     const footer = document.getElementById('site-footer');
     
     footer.innerHTML = `
+        <!-- Global Running Text Donators -->
+        <div class="container mb-8">
+            <h3 class="text-xs text-accent font-bold uppercase tracking-wider mb-2 text-center">Top Supporters</h3>
+            <iframe 
+                src="https://saweria.co/widgets/recent?streamKey=06f99d9f055f5b8019a99fd37d02a84b" 
+                style="width: 100%; height: 50px; border: none; overflow: hidden; background: transparent;" 
+                scrolling="no">
+            </iframe>
+        </div>
         <div class="container grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
                 <a href="#/" class="logo mb-4" style="display: inline-flex;">
