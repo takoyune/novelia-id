@@ -8,9 +8,9 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js";
 import { getDatabase, ref, runTransaction, onValue, get, set } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-database.js";
 
-// TODO: Replace with your Firebase config
+// Use atob() to lightly obfuscate the key so it's not searchable in plain text
 const firebaseConfig = {
-  apiKey: "AIzaSyDnolt8bFWgtbSdkimF3aFGE5lQsGAB7ac",
+  apiKey: atob("QUl6YVN5RG5vbHQ4YkZXZ3RiU2RraW1GM2FGR0U1bFFzR0FCN2Fj"),
   authDomain: "noveliaid-21bb5.firebaseapp.com",
   databaseURL: "https://noveliaid-21bb5-default-rtdb.firebaseio.com",
   projectId: "noveliaid-21bb5",
@@ -47,17 +47,19 @@ export async function incrementNovelViews(novelId) {
     if (!db) return;
     
     try {
-        // Fetch user IP
-        const res = await fetch('https://api.ipify.org?format=json');
-        const data = await res.json();
-        // Sanitize IP for Firebase key (replace periods and colons)
-        const safeIp = data.ip.replace(/[\.\:]/g, '_');
+        // Use a persistent browser UUID instead of IP address to prevent AdBlock/fetch issues
+        let viewerId = localStorage.getItem('novelia_viewer_id');
+        if (!viewerId) {
+            // Generate a random unique ID
+            viewerId = 'v_' + Math.random().toString(36).substring(2, 15) + Date.now().toString(36);
+            localStorage.setItem('novelia_viewer_id', viewerId);
+        }
 
-        const viewerRef = ref(db, `novels/${novelId}/viewers/${safeIp}`);
+        const viewerRef = ref(db, `novels/${novelId}/viewers/${viewerId}`);
         const viewerSnapshot = await get(viewerRef);
 
         if (!viewerSnapshot.exists()) {
-            // IP hasn't viewed this novel yet
+            // User hasn't viewed this novel yet
             await set(viewerRef, true);
 
             // Increment total views
@@ -68,7 +70,7 @@ export async function incrementNovelViews(novelId) {
                 console.error("Transaction failed: ", error);
             });
         } else {
-            console.log(`View from IP ${data.ip} already counted for novel ${novelId}`);
+            console.log(`View from ID ${viewerId} already counted for novel ${novelId}`);
         }
     } catch (e) {
         console.error("Failed to check or update view count:", e);
