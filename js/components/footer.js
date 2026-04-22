@@ -2,14 +2,17 @@ export function renderFooter() {
     const footer = document.getElementById('site-footer');
     
     footer.innerHTML = `
-        <!-- Global Running Text Donators -->
+        <!-- Global Donation Banner -->
         <div class="container mb-8">
-            <h3 class="text-xs text-accent font-bold uppercase tracking-wider mb-2 text-center">Top Supporters</h3>
-            <iframe 
-                src="https://saweria.co/widgets/recent?streamKey=06f99d9f055f5b8019a99fd37d02a84b" 
-                style="width: 100%; height: 50px; border: none; overflow: hidden; background: transparent;" 
-                scrolling="no">
-            </iframe>
+            <div class="bg-accent/10 border border-accent/20 rounded-xl p-4 flex flex-col md:flex-row items-center justify-between gap-4">
+                <div>
+                    <h3 class="text-accent font-bold mb-1">Dukung Terjemahan Kami! ☕</h3>
+                    <p class="text-sm text-secondary">Suka dengan novel di sini? Bantu traktir kopi agar kami makin semangat update chapter baru.</p>
+                </div>
+                <a href="https://saweria.co/Takoyune" target="_blank" rel="noopener noreferrer" class="btn shrink-0" style="background-color: #E2B02A; color: #333; border: none;">
+                    <i class="fas fa-coffee mr-2"></i> Traktir Saweria
+                </a>
+            </div>
         </div>
         <div class="container grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>

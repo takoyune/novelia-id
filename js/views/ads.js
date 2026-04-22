@@ -22,21 +22,24 @@ export default class AdsView {
                     <h2 class="text-3xl font-bold text-primary">Traktir Kopi Dulu Yuk! ☕</h2>
                     <p class="text-secondary">Jika kamu suka dengan terjemahan kami, dukung kami via Saweria agar makin semangat update!</p>
 
-                    <!-- Saweria Widgets -->
-                    <div class="w-full flex flex-col items-center gap-2">
-                        <!-- QR Code -->
-                        <iframe 
-                            src="https://saweria.co/widgets/qr?streamKey=06f99d9f055f5b8019a99fd37d02a84b" 
-                            style="width: 300px; height: 300px; border: none; overflow: hidden; background: transparent;" 
-                            scrolling="no">
-                        </iframe>
+                    <!-- Saweria Content -->
+                    <div class="w-full flex flex-col items-center gap-4">
+                        <!-- QR Code Image -->
+                        <div class="bg-white p-2 rounded-xl">
+                            <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://saweria.co/Takoyune" 
+                                 alt="Saweria QR Code" 
+                                 class="w-[200px] h-[200px]" />
+                        </div>
                         
-                        <!-- Running Text -->
-                        <iframe 
-                            src="https://saweria.co/widgets/recent?streamKey=06f99d9f055f5b8019a99fd37d02a84b" 
-                            style="width: 100%; height: 50px; border: none; overflow: hidden; background: transparent;" 
-                            scrolling="no">
-                        </iframe>
+                        <!-- Clickable Button -->
+                        <a href="https://saweria.co/Takoyune" 
+                           target="_blank" 
+                           rel="noopener noreferrer" 
+                           class="btn flex items-center justify-center gap-2"
+                           style="background-color: #E2B02A; color: #333;">
+                            <i class="fas fa-coffee"></i> 
+                            Traktir via Saweria
+                        </a>
                     </div>
 
                     <div class="flex flex-col items-center gap-4">
