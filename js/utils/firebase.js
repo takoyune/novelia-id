@@ -6,7 +6,7 @@
  */
 
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js";
-import { getDatabase, ref, runTransaction, onValue } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-database.js";
+import { getDatabase, ref, runTransaction, onValue, get, set } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-database.js";
 
 // TODO: Replace with your Firebase config
 const firebaseConfig = {
@@ -43,15 +43,62 @@ export function initFirebase() {
  * Increment the view count for a specific novel.
  * @param {string} novelId 
  */
-export function incrementNovelViews(novelId) {
+export async function incrementNovelViews(novelId) {
     if (!db) return;
     
-    const viewsRef = ref(db, `novels/${novelId}/views`);
-    runTransaction(viewsRef, (currentViews) => {
-        return (currentViews || 0) + 1;
-    }).catch(error => {
-        console.error("Transaction failed: ", error);
-    });
+    try {
+        // Fetch user IP
+        const res = await fetch('https://api.ipify.org?format=json');
+        const data = await res.json();
+        // Sanitize IP for Firebase key (replace periods and colons)
+        const safeIp = data.ip.replace(/[\.\:]/g, '_');
+
+        const viewerRef = ref(db, `novels/${novelId}/viewers/${safeIp}`);
+        const viewerSnapshot = await get(viewerRef);
+
+        if (!viewerSnapshot.exists()) {
+            // IP hasn't viewed this novel yet
+            await set(viewerRef, true);
+
+            // Increment total views
+            const viewsRef = ref(db, `novels/${novelId}/views`);
+            runTransaction(viewsRef, (currentViews) => {
+                return (currentViews || 0) + 1;
+            }).catch(error => {
+                console.error("Transaction failed: ", error);
+            });
+        } else {
+            console.log(`View from IP ${data.ip} already counted for novel ${novelId}`);
+        }
+    } catch (e) {
+        console.error("Failed to check or update view count:", e);
+    }
+}
+
+/**
+ * Get all view counts for sorting.
+ * @returns {Promise<Object>} Map of novelId to view count
+ */
+export async function getAllNovelViews() {
+    if (!db) return {};
+
+    try {
+        const novelsRef = ref(db, 'novels');
+        const snapshot = await get(novelsRef);
+        
+        if (snapshot.exists()) {
+            const data = snapshot.val();
+            const viewsMap = {};
+            for (const [id, novelData] of Object.entries(data)) {
+                viewsMap[id] = novelData.views || 0;
+            }
+            return viewsMap;
+        }
+        return {};
+    } catch (e) {
+        console.error("Failed to get all views:", e);
+        return {};
+    }
 }
 
 /**
