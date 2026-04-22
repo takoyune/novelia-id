@@ -58,7 +58,8 @@ class App {
             // In a real app, you might fetch just a version hash first to check if you need to download the full DB
             // For this simulation, we'll fetch every time to ensure freshness, but use cache if fetch fails
             
-            const response = await fetch('database.json');
+            // Use a cache-busting timestamp to prevent the browser's HTTP cache from serving stale data
+            const response = await fetch(`database.json?t=${new Date().getTime()}`);
             if (!response.ok) throw new Error(`HTTP error! status: ${response.status}`);
             
             const data = await response.json();
