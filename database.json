@@ -166,12 +166,75 @@
           "title": "Pertemuan",
           "index": 5,
           "date": "2026-04-22"
+        },
+        {
+          "id": "ch-6",
+          "title": "Aliansi Jahat",
+          "index": 6,
+          "date": "2026-04-22"
+        },
+        {
+          "id": "ch-7",
+          "title": "Seberapa Pun Aku Menjauh",
+          "index": 7,
+          "date": "2026-04-23"
+        },
+        {
+          "id": "ch-8",
+          "title": "Waktu Bersama Keluarga",
+          "index": 8,
+          "date": "2026-04-23"
+        },
+        {
+          "id": "ch-9",
+          "title": "Latihan Otot",
+          "index": 9,
+          "date": "2026-04-24"
+        },
+        {
+          "id": "ch-10",
+          "title": "Teman Preman",
+          "index": 10,
+          "date": "2026-04-24"
+        },
+        {
+          "id": "ch-11",
+          "title": "Teman Preman",
+          "index": 11,
+          "date": "2026-04-24"
+        }
+      ]
+    },
+    {
+      "id": "Majo-to-yohei",
+      "title": "Penyihir dan Tentara Bayaran (Majo To Yohei)",
+      "cover": "assets/covers/Majo-to-yohei.jpg",
+      "author": "Chohokiteki Kaeru",
+      "artist": "Kanase Bench",
+      "year": "2021",
+      "translator": "Novelia ID Team",
+      "rating": 4.3,
+      "genres": [
+        "Adventure",
+        "Action",
+        "Fantasy",
+        "Romance"
+      ],
+      "status": "Ongoing",
+      "synopsis": "\"Penyihir\"――satu-satunya eksistensi misterius yang tersisa di benua tempat monster dan ilmu sihir telah punah.\n\nJig, seorang tentara bayaran, berangkat untuk menumpas makhluk yang telah ditakuti sejak zaman kuno tersebut. Setelah pertarungan yang sengit, ia berhasil menang tipis, namun di saat yang sama ia kehilangan alasan untuk membunuh sang penyihir. Tepat ketika Jig berbalik pergi tanpa memberikan serangan penghabisan, sang penyihir memanggil dari belakang dan mengajukan sebuah permintaan.\n\nSebuah harapan agar bisa hidup tenang tanpa diburu oleh siapa pun.\n\nSetelah sempat bimbang, sang tentara bayaran akhirnya memutuskan untuk menerima pekerjaan itu. Menyadari bahwa hal tersebut akan sangat sulit diwujudkan di benua ini—mengingat kuatnya kebencian penduduk terhadap penyihir—Jig memutuskan untuk pergi ke benua lain. Benua seberang itu memang sudah lama diketahui keberadaannya, namun jalur pelayarannya baru berhasil dibuka akhir-akhir ini.",
+      "lastUpdated": "2026-04-22T23:24:00Z",
+      "chapters": [
+        {
+          "id": "ch-1",
+          "title": "Penyihir dan Tentara Bayaran",
+          "index": 1,
+          "date": "2026-04-22"
         }
       ]
     }
   ],
   "meta": {
-    "totalNovels": 4,
-    "lastUpdated": "2026-04-22T19:53:00Z"
+    "totalNovels": 5,
+    "lastUpdated": "2026-04-22T23:24:00Z"
   }
 }
