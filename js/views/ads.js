@@ -16,19 +16,27 @@ export default class AdsView {
                 <div class="max-w-md w-full space-y-8 animate-fade-in">
                     <!-- Ad Badge -->
                     <div class="inline-block px-3 py-1 rounded-full bg-accent/10 text-accent text-xs font-bold uppercase tracking-wider mb-4">
-                        Commercial Break
+                        Dukung Novelia ID
                     </div>
 
-                    <h2 class="text-3xl font-bold text-primary">Please wait a moment...</h2>
-                    <p class="text-secondary">We'll continue to your content shortly. This helps keep Novelia free!</p>
+                    <h2 class="text-3xl font-bold text-primary">Traktir Kopi Dulu Yuk! ☕</h2>
+                    <p class="text-secondary">Jika kamu suka dengan terjemahan kami, dukung kami via Saweria agar makin semangat update!</p>
 
-                    <!-- Mock Ad Content -->
-                    <div class="aspect-video w-full bg-surface rounded-2xl border-2 border-dashed border-border flex items-center justify-center p-8 group hover:border-accent transition-colors">
-                        <div class="text-center">
-                            <i class="fas fa-ad fa-4x text-accent/20 group-hover:text-accent/40 transition-colors mb-4"></i>
-                            <p class="text-sm font-medium text-secondary">Premium Web Novel Experience</p>
-                            <p class="text-xs text-muted">Join 10,000+ readers today</p>
-                        </div>
+                    <!-- Saweria Widgets -->
+                    <div class="w-full flex flex-col items-center gap-2">
+                        <!-- QR Code -->
+                        <iframe 
+                            src="https://saweria.co/widgets/qr?streamKey=06f99d9f055f5b8019a99fd37d02a84b" 
+                            style="width: 300px; height: 300px; border: none; overflow: hidden; background: transparent;" 
+                            scrolling="no">
+                        </iframe>
+                        
+                        <!-- Running Text -->
+                        <iframe 
+                            src="https://saweria.co/widgets/recent?streamKey=06f99d9f055f5b8019a99fd37d02a84b" 
+                            style="width: 100%; height: 50px; border: none; overflow: hidden; background: transparent;" 
+                            scrolling="no">
+                        </iframe>
                     </div>
 
                     <div class="flex flex-col items-center gap-4">
