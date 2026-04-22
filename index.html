@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" class="system">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novelia ID | Web Novel Translation Platform</title>
+    <meta name="description" content="Read high-quality translated web novels for free. Action, Fantasy, Romance, and more.">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Novelia ID">
+    <meta property="og:description" content="Read high-quality translated web novels for free.">
+    <meta property="og:image" content="">
+    <meta property="og:type" content="website">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Inter:wght@300;400;500;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- ARIA Live Region for screen readers -->
+    <div id="a11y-announcer" aria-live="polite" class="sr-only"></div>
+
+    <!-- Navigation Header -->
+    <header id="site-header" class="site-header"></header>
+
+    <!-- Main Content Area (SPA Router Outlet) -->
+    <main id="app" class="app-container">
+        <!-- Skeleton Loader (Shown initially) -->
+        <div id="initial-skeleton" class="skeleton-container">
+            <div class="skeleton-hero shimmer"></div>
+            <div class="skeleton-grid">
+                <div class="skeleton-card shimmer"></div>
+                <div class="skeleton-card shimmer"></div>
+                <div class="skeleton-card shimmer"></div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer id="site-footer" class="site-footer"></footer>
+
+    <!-- Core Scripts -->
+    <script src="js/utils/debounce.js" type="module"></script>
+    <script src="js/utils/markdown.js" type="module"></script>
+    <script src="js/utils/seo.js" type="module"></script>
+    <script src="js/utils/a11y.js" type="module"></script>
+    
+    <script src="js/store.js" type="module"></script>
+    <script src="js/theme.js" type="module"></script>
+    <script src="js/router.js" type="module"></script>
+    
+    <!-- Components -->
+    <script src="js/components/navbar.js" type="module"></script>
+    <script src="js/components/footer.js" type="module"></script>
+    <script src="js/components/carousel.js" type="module"></script>
+    <script src="js/components/novelCard.js" type="module"></script>
+    <script src="js/components/skeleton.js" type="module"></script>
+    <script src="js/components/filterSidebar.js" type="module"></script>
+    
+    <!-- Views -->
+    <script src="js/views/home.js" type="module"></script>
+    <script src="js/views/detail.js" type="module"></script>
+    <script src="js/views/reader.js" type="module"></script>
+    
+    <!-- Entry Point -->
+    <script src="js/app.js" type="module"></script>
+</body>
+</html>
