@@ -179,14 +179,25 @@ export default class DetailView {
         });
 
         // Real-time Views
-        incrementNovelViews(this.novel.id);
-        this.unsubscribeViews = subscribeToNovelViews(this.novel.id, (views) => {
+        try {
+            incrementNovelViews(this.novel.id);
+            this.unsubscribeViews = subscribeToNovelViews(this.novel.id, (views) => {
+                const viewCountEl = document.getElementById('view-count');
+                if (viewCountEl) {
+                    viewCountEl.textContent = new Intl.NumberFormat().format(views || 0);
+                }
+            });
+        } catch (e) {
+            console.error('Firebase view error:', e);
+        }
+
+        // Fallback: if after 5 seconds view count still shows spinner, set to 0
+        setTimeout(() => {
             const viewCountEl = document.getElementById('view-count');
-            if (viewCountEl) {
-                // Format to something like 1,234
-                viewCountEl.textContent = new Intl.NumberFormat().format(views || 0);
+            if (viewCountEl && viewCountEl.querySelector('.fa-spinner')) {
+                viewCountEl.textContent = '0';
             }
-        });
+        }, 5000);
     }
 
     _getResumeChapter() {
