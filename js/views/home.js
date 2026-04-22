@@ -121,18 +121,15 @@ export default class HomeView {
     bindFilterEvents() {
         const sidebar = document.getElementById('filter-sidebar-root');
         
-        // Checkboxes (Genres)
-        const checkboxes = sidebar.querySelectorAll('input[type="checkbox"]');
-        checkboxes.forEach(cb => {
-            cb.addEventListener('change', () => {
-                const selected = Array.from(checkboxes)
-                    .filter(i => i.checked)
-                    .map(i => i.value);
-                
+        // Multi-select Dropdown (Genres)
+        const genreSelect = sidebar.querySelector('#genre-select');
+        if (genreSelect) {
+            genreSelect.addEventListener('change', () => {
+                const selected = Array.from(genreSelect.selectedOptions).map(opt => opt.value);
                 store.setNestedState('filters', 'genres', selected);
                 this.updateUrl();
             });
-        });
+        }
 
         // Radios (Status)
         const radios = sidebar.querySelectorAll('input[type="radio"]');

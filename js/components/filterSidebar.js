@@ -21,15 +21,13 @@ export function renderFilterSidebar(containerId, initialFilters) {
     // Genres
     html += `
         <div class="filter-group mb-6">
-            <span class="filter-title block mb-3 font-bold">Genres</span>
-            <div class="scroll-container">
+            <span class="filter-title block mb-2 font-bold">Genres</span>
+            <select id="genre-select" class="sort-select text-sm w-full" multiple size="4" style="padding-top: 0.5rem;">
                 ${genres.map(g => `
-                    <label class="relative cursor-pointer shrink-0">
-                        <input type="checkbox" name="genre" value="${g}" class="chip-checkbox" ${initialFilters.genres.includes(g) ? 'checked' : ''}>
-                        <span class="filter-chip">${g}</span>
-                    </label>
+                    <option value="${g}" ${initialFilters.genres.includes(g) ? 'selected' : ''}>${g}</option>
                 `).join('')}
-            </div>
+            </select>
+            <p class="text-xs text-muted mt-2"><i class="fas fa-info-circle"></i> Tahan Ctrl/Cmd untuk memilih banyak (PC) atau tap ganda (HP)</p>
         </div>
     `;
 
