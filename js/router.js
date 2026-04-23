@@ -120,13 +120,17 @@ class Router {
     _syncUrlToFilters(queryParams) {
         // If navigating to home with NO query params, reset all filters
         if (Object.keys(queryParams).length === 0) {
-            store.setNestedState('filters', 'search', '');
-            store.setNestedState('filters', 'genres', []);
-            store.setNestedState('filters', 'status', 'All');
-            store.setNestedState('filters', 'sort', 'Latest Update');
-            // Also clear the search input if it exists
-            const searchInput = document.getElementById('global-search');
-            if (searchInput) searchInput.value = '';
+            store.setState('filters', {
+                search: '',
+                genres: [],
+                status: 'All',
+                sort: 'Latest Update'
+            });
+            // Thoroughly clear all search inputs
+            const searchInputs = document.querySelectorAll('.search-input');
+            searchInputs.forEach(input => {
+                input.value = '';
+            });
             return;
         }
 

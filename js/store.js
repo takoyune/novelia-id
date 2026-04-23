@@ -121,13 +121,32 @@ class Store {
         
         // 1. Search (matches title, Japanese title, romaji, and author)
         if (filters.search) {
-            const query = filters.search.toLowerCase();
-            novels = novels.filter(n => 
-                n.title.toLowerCase().includes(query) || 
-                n.author.toLowerCase().includes(query) ||
-                (n.japaneseTitle && n.japaneseTitle.toLowerCase().includes(query)) ||
-                (n.RomanjiTitle && n.RomanjiTitle.toLowerCase().includes(query))
-            );
+            // Helper to normalize strings for comparison (remove macrons, handle common variations)
+            const simpleNormalize = (str) => {
+                if (!str) return '';
+                return str.toLowerCase()
+                    .normalize('NFD').replace(/[\u0300-\u036f]/g, '') // Remove macrons (ū -> u)
+                    .replace(/ū/g, 'u').replace(/ō/g, 'o').replace(/ā/g, 'a').replace(/ī/g, 'i').replace(/ē/g, 'e')
+                    .replace(/yuu/g, 'yu').replace(/ou/g, 'o').replace(/aa/g, 'a')
+                    .trim();
+            };
+
+            const query = filters.search.toLowerCase().trim();
+            const normalizedQuery = simpleNormalize(query);
+
+            novels = novels.filter(n => {
+                const title = n.title.toLowerCase();
+                const jpTitle = (n.japaneseTitle || '').toLowerCase();
+                const romajiTitle = (n.RomanjiTitle || n.romajiTitle || '').toLowerCase();
+                const author = n.author.toLowerCase();
+
+                return title.includes(query) || 
+                       author.includes(query) ||
+                       jpTitle.includes(query) ||
+                       romajiTitle.includes(query) ||
+                       simpleNormalize(title).includes(normalizedQuery) ||
+                       simpleNormalize(romajiTitle).includes(normalizedQuery);
+            });
         }
 
         // 2. Status
