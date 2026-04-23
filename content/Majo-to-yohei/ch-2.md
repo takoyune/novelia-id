@@ -1,3 +1,5 @@
+## 
+
 Sekitar setengah jam setelah rapat antara para pemimpin tentara bayaran dan perwira prajurit resmi selesai, pasukan pembasmi pun berangkat.
 
 Mereka berbaris menembus hutan lebat dengan pepohonan raksasa yang menjulang.

@@ -1,3 +1,5 @@
+## 
+
 *PRANG!* Suara nyaring benda pecah bergema di seluruh ruangan.
 
 Suara berisik itu—yang bikin orang refleks pengen tutup kuping—berasal dari seorang pria berumur pertengahan 30-an. Dia mengenakan seragam militer kerah tertutup, lengkap dengan kumis *kaizer* dan tongkat hitam mengkilap di tangannya. Dengan tongkat itulah dia baru saja menghancurkan vas bunga raksasa setinggi satu meter.

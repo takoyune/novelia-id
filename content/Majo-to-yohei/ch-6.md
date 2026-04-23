@@ -1,3 +1,5 @@
+## 
+
 Setelah menempuh perjalanan sekitar dua hari dengan berganti-ganti kereta kuda, Zieg dan Sia tiba di Estina untuk menyelinap ke dalam tim ekspedisi. Estina adalah negara pesisir yang ramai oleh perdagangan dan perikanan; pelabuhannya tak pernah sepi dari lalu lalang kapal.
 
 "Ini benar-benar... pemandangan yang luar biasa ya," gumam Sia dengan nada kagum saat melihat sebuah kapal yang tampak sangat besar dan kokoh di antara kapal lainnya.

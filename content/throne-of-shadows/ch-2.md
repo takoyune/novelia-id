@@ -1,3 +1,5 @@
+## Asset Acquisition
+
 The speaker was an imp, a grotesque creature with leathery wings and a twisted, fanged visage. It bowed low, trembling. Arthur recognized it from the memories flooding his new brain. It was a low-level servant of the House of Vane.
 
 His new name was Malakor. He was the last surviving heir of a demonic noble house that had been eradicated by the Holy Paladins of the surface world.

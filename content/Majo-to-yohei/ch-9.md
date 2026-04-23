@@ -1,3 +1,5 @@
+## 
+
 "Jadi ini... Benua Baru?"
 
 Sia menyipitkan matanya, berusaha menembus pandangan di depannya. Meski sedikit berkabut, sejauh mata memandang semuanya terlihat biasa saja.

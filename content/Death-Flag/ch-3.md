@@ -1,3 +1,5 @@
+## 
+
 Walaupun sudah mendapatkan informasi penting, penyelesaian masalah ini masih terasa jauh panggang dari api. Kazuki perlu menyusun rencana konkret untuk menyelamatkan Clara dan Colette.
 
 Rencana sementaranya adalah membuat mereka keluar dari wilayah Stokes dan pindah ke Desa Brouche, tempat keluarga Leiner—sang protagonis utama di cerita aslinya—tinggal.

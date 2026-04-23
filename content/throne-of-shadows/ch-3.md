@@ -1,3 +1,5 @@
+## Hostile Takeover
+
 Malakor observed the two Paladins from the shadows. They were relaxed, confident in their holy armor and the perceived weakness of the dungeon denizens. A fatal error in risk assessment.
 
 He activated **[Inspect]**.

@@ -1,3 +1,5 @@
+## Aliansi Jahat
+
 Sambil terus menyantap udon, aku terpaksa mendengarkan celotehan riang dari Mashiro.
 
 Tampaknya gadis ini punya banyak teman sesama *gyaru*, karena di tengah-tengah makan siang, meja tempatku duduk tiba-tiba sudah dikepung oleh gerombolan gadis *gyaru*.

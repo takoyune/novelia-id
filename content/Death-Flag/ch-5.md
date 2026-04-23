@@ -1,3 +1,5 @@
+## 
+
 Orang tua Harold benar-benar percaya kalau Clara dan putrinya, Colette, sudah mati. Mereka sepertinya sama sekali tidak punya pikiran untuk mencurigai anak kandung mereka sendiri.
 
 Melihat mereka yang malah memuji-muji Harold punya "bakat sihir" padahal baru saja (disangka) menghabisi nyawa wanita dan anak kecil, Kazuki merasakan jurang pemisah yang sangat dalam. Selama orang tuanya tidak membuang nilai-nilai moral menyimpang itu, perdamaian di antara mereka tidak akan pernah terjadi.

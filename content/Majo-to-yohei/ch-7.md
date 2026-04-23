@@ -1,3 +1,5 @@
+## 
+
 Setelah selesai memesan perlengkapan di pandai besi dan membeli berbagai kebutuhan logistik, matahari mulai terbenam. Karena siang tadi hanya makan sate, perut mereka pun mulai berunjuk rasa.
 
 "Kita makan malam dulu, yuk?"

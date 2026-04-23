@@ -1,3 +1,5 @@
+## 
+
 "Kalau sudah paham, segera kerjakan. Norman, rangkum semua yang gue jelasin tadi jadi dokumen buat ngebujuk rakyat. Kalau ada yang nggak jelas atau lo rasa aneh, jangan sungkan tanya ke gue."
 
 "Baik, Tuan."

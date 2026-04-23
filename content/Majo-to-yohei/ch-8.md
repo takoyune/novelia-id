@@ -1,3 +1,5 @@
+## 
+
 Hari keberangkatan tiba, lima hari kemudian.
 
 Kekhawatiran akan adanya masalah saat naik ke kapal ternyata tidak terbukti sama sekali. Mereka berhasil masuk dengan sangat lancar, bahkan cenderung terlalu mudah. Zieg dan Sia sempat merasa lega karena rute pelarian dan rencana cadangan yang mereka susun mati-matian ternyata tidak perlu digunakan.

@@ -1,3 +1,5 @@
+## Ujian Praktik
+
 Di ruang latihan Akademi Sihir Crawford Kerajaan Gilbert, seorang guru bernama Lina Restia sedang menatap tajam gerak-gerik salah satu murid laki-lakinya.
 
 Nama murid itu adalah Shion Kurosaki. Dia adalah murid kelas 2-C yang berada di bawah bimbingan Restia.

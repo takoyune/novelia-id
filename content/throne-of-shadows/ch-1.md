@@ -1,3 +1,5 @@
+## Corporate Restructuring
+
 The merger was complete. The hostile takeover had been a bloodbath of severed contracts and ruined careers, but Arthur Pendelton had secured the majority share. He stood at the penthouse window, looking down at the city lights, swirling a glass of expensive scotch.
 
 He was the king of the corporate jungle.

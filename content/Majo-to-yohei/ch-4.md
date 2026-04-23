@@ -1,3 +1,5 @@
+## 
+
 Zieg mengatur napasnya sambil tetap waspada memperhatikan gerak-gerik lawannya.
 
 Bertarung melawan penyihir memang di luar dugaannya, tapi ternyata dia bisa bertahan jauh lebih baik dari yang dibayangkan. Faktor utamanya adalah karena lawan tampak tidak mahir dalam pertarungan jarak dekat. Wajar saja, punya serangan jarak jauh sekuat itu pasti membuatnya kurang pengalaman dalam duel satu lawan satu.

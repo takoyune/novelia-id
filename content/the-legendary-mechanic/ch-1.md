@@ -1,3 +1,5 @@
+## Rebirth
+
 Han Xiao opened his eyes heavily, his head throbbing with a dull ache. The air smelled of ozone and cheap antiseptic.
 
 He tried to move, but cold metal restraints held his wrists tight against a slanted examination table. Blinking against the harsh fluorescent lights, his vision finally cleared, revealing a sterile, white-tiled laboratory room. Men in white coats and armed guards in black tactical gear moved about the space.

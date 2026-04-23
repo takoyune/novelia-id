@@ -1,3 +1,5 @@
+## Kilatan Mata Merah di Malam Gelap Part 1
+
 Minggu yang sama dengan diadakannya ujian rutin di akademi sihir.
 
 Shion mengunjungi Ibu Kota pada hari libur akhir pekan.

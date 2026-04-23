@@ -1,3 +1,5 @@
+## Kilatan Mata Merah di Malam Gelap Part 2
+
 "Yo kawan-kawan, kelihatannya kalian lagi asyik banget, ya."
 
 Ketiga pria itu, juga wanita berjubah tersebut, mengalihkan pandangan ke arah seorang pria yang berdiri di atas atap bangunan di pinggir gang, membelakangi bayangan rembulan.

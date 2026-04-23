@@ -1,3 +1,5 @@
+## 
+
 Rambut hitam legam yang berkilau dengan mata merah. Fitur wajahnya yang tegas—yang terasa sangat jauh dari standar orang Jepang atau bahkan Asia—mau tidak mau bikin sosok Harold Stokes langsung terbayang.
 
 Tingginya sekitar 140 cm, dan umurnya memang di kisaran 10 tahun.

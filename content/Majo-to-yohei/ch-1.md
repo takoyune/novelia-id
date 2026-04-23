@@ -1,3 +1,5 @@
+## 
+
 "Banyak juga ya yang kumpul."
 
 Di perkemahan itu, para tentara bayaran, prajurit pribadi bangsawan, sampai milisi warga tampak bersiap-siap. Semuanya tumplek blek jadi satu.

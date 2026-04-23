@@ -1,3 +1,5 @@
+## Guru Wali Kelas Part 1
+
 Setelah seluruh pelajaran pada hari itu berakhir, Shion beranjak menuju gudang dokumen staf pengajar yang terletak di pinggiran gedung utama.
 
 Hari ini, dia diminta oleh guru wali kelasnya, Lina Restia, untuk datang ke gudang dokumen sepulang sekolah. "Ada beberapa dokumen yang ingin aku minta tolong kamu bawakan," katanya. Itu adalah bantuan untuk persiapan pelajaran yang akan dia bawakan besok.

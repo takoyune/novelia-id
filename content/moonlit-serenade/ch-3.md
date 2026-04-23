@@ -1,3 +1,5 @@
+## The Silver Mask
+
 Obsidian Keep was a labyrinth of dark stone corridors and grand halls lit by perpetually glowing crystals that cast a soft, blue luminescence. Elara was given a suite of rooms that rivaled the Royal Palace in luxury, though the color palette was decidedly muted.
 
 Days turned into weeks. She rarely saw Kaelen. He was a phantom in his own castle, appearing only occasionally for silent dinners at the opposite end of a long, polished obsidian table.

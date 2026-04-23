@@ -1,3 +1,5 @@
+## Shion Kurosaki part 1
+
 Orang tua Shion Kurosaki berasal dari silsilah keluarga yang turun-temurun mengelola bisnis perdagangan, dan sama sekali tidak memiliki hubungan dengan dunia sihir.
 
 Kekuatan mana serta bakat seorang penyihir dalam mengolah sihir biasanya diturunkan secara genetik. Anak yang lahir dari orang tua penyihir hebat umumnya akan diberkati dengan kemampuan yang serupa.

@@ -1,3 +1,5 @@
+## 
+
 Esok harinya, Kazuki benar-benar bergerak secara aktif sejak pagi. Lebih tepatnya, dia mengerahkan dua orang prajuritnya.
 
 Kedua prajurit itu adalah mereka yang sudah tahu tindakan Kazuki kemarin. Demi menjaga kerahasiaan rencana penyelamatan Clara ini, Kazuki merasa semakin sedikit orang yang terlibat akan semakin baik. Dia sudah mengonfirmasi kepada Norman kemarin siapa orang yang bisa dipercaya untuk menjaga rahasia.

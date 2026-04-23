@@ -1,3 +1,5 @@
+## 
+
 Keluar dari ruangan *tatami*, Kazuki mengikuti Erika menuruni tangga menuju taman yang dirawat dengan sangat teliti hingga ke sudut-sudutnya. Suara *geta* (sandal kayu) hitam mengkilap yang dipakai Erika terdengar beradu dengan batu setapak, *klotak-klotak*, saat dia berjalan di depan.
 
 Erika berhenti di bawah sebuah pohon raksasa setinggi 20 meter lebih. Di tengah pemandangan fantastis kelopak bunga merah muda yang berguguran, dia berbalik menghadap Kazuki.

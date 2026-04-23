@@ -1,3 +1,5 @@
+## Journey to Nocturne
+
 The carriage ride was a journey into perpetual twilight. As they crossed the border into the realm of Nocturne, the vibrant greens and golds of Elara's home faded into deep purples, indigos, and midnight blues.
 
 The Lord of Night sat opposite her, silent as a statue. He hadn't spoken a word since the Selection. Elara clutched her small satchel, her knuckles white. She was terrified, yet a strange curiosity bloomed within her.

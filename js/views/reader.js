@@ -40,7 +40,17 @@ export default class ReaderView {
                 if (response.status === 404) throw new Error('Chapter content file not found.');
                 throw new Error(`Failed to load chapter content (${response.status}).`);
             }
-            const markdownText = await response.text();
+            let markdownText = await response.text();
+            
+            // Strip the ## Title heading from first line (it's already shown in the reader header)
+            const lines = markdownText.split(/\r?\n/);
+            if (lines[0].trim().startsWith('## ')) {
+                // Remove the title line and any blank line after it
+                lines.shift();
+                if (lines.length > 0 && lines[0].trim() === '') lines.shift();
+                markdownText = lines.join('\n');
+            }
+            
             htmlContent = parseMarkdown(markdownText);
         } catch (error) {
             console.error('Error fetching chapter content:', error);

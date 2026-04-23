@@ -1,3 +1,5 @@
+## Seberapa Pun Aku Menjauh
+
 Aku terus mengikuti pelajaran sambil menyaksikan pemandangan menyilaukan yang disuguhkan oleh sang protagonis dan para heroine. Tanpa terasa, waktu sudah menunjukkan jam pulang sekolah.
 
 Hari ini, banyak sekali pencapaian yang kudapatkan dengan datang ke sekolah.

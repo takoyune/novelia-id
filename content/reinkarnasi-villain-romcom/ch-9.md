@@ -1,3 +1,5 @@
+## Latihan Otot
+
 Setelah makan malam selesai, aku merapikan peralatan makan dan menyuruh Mai untuk mandi duluan. Selagi adikku menikmati giliran mandi pertama, aku kembali ke kamar dan mulai mencicil tumpukan tugas sekolah yang masih menggunung.
 
 Aku duduk di depan meja, menggerakkan pena dalam diam. Namun di tengah pengerjaan, tiba-tiba aku merasa tubuhku gelisah, seolah sedang menuntut sesuatu.

@@ -1,3 +1,5 @@
+## 
+
 Sudah sekitar tiga minggu berlalu sejak aku kembali ke kediaman Stokes, dan tidak ada yang benar-benar berubah di sini. Yah, kalau mau dipaksakan, paling cuma fakta bahwa Jake mulai mencoba metode Pertanian LP di halaman rumahnya sendiri. Sepertinya kemarin dia masih setengah percaya saat cuma dengar penjelasan teoriku.
 
 Tapi berkat kegigihannya itu, Jake yang sekarang melihat secercah harapan untuk menyelamatkan keuangan wilayah mulai bekerja ekstra keras demi persiapan uji coba lapangan. Norman juga bergerak sangat rapi di bawah radar, jadi orang tuaku sama sekali tidak curiga. Sejauh ini, semua berjalan sesuai rencana.

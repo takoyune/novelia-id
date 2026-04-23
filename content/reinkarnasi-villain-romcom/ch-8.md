@@ -1,3 +1,5 @@
+## Waktu Bersama Keluarga
+
 Sesampainya di rumah, aku langsung berdiri di dapur.
 
 Tadi aku sempat berbaring di tempat tidur sambil merenung, tapi karena terlalu banyak berpikir, kepalaku malah jadi pening. Akhirnya, aku memutuskan untuk menyiapkan makan malam sebagai bentuk penyegaran suasana hati.

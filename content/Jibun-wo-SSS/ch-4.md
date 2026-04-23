@@ -1,3 +1,5 @@
+## Berangkat Sekolah
+
 Saat matahari mulai terbit dan cahaya tipis mulai menyinari langit yang tadinya gelap gulita, Shion Kurosaki menyudahi latihan dasar merapalkan sihir pemula tiap atribut. Dia meminum ramuan pemulih mana, beristirahat sejenak selama lima menit, lalu mengambil pedang yang dia bawa dari asrama.
 
 Sepertinya hari ini dia akan mencoba sihir yang telah dia pelajari melalui buku akademik dan eksperimen mandiri selama beberapa hari terakhir, namun dengan metode baru yang baru saja dia pikirkan.

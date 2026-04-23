@@ -1,3 +1,5 @@
+## Shion Kurosaki part 2
+
 ── Sekarang, di usianya yang ketujuh belas. Shion yang masih mengincar gelar terkuat tidak pernah sekalipun melalaikan latihan hariannya.
 
 Latihan rutinnya dimulai bukan di pagi buta, melainkan di waktu yang lebih tepat disebut tengah malam.

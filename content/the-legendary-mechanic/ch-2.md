@@ -1,3 +1,5 @@
+## First Contact
+
 The memory wiping serum was scheduled for administration in exactly five minutes. Han Xiao could see the countdown timer ticking away on the researcher's terminal.
 
 He desperately scanned his surroundings. As a top-tier player in his past life, he knew the mechanics of this game inside and out. He just needed an opening.

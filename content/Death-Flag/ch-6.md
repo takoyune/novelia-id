@@ -1,3 +1,5 @@
+## 
+
 "Sip, kalau gitu gue berangkat ya!"
 
 Begitu perintah keluar, Zen langsung melesat keluar kamar dengan penuh semangat. Kazuki cuma bisa geleng-geleng kepala, heran sendiri kenapa itu orang bisa seantusias itu. Ada rasa cemas yang nyelip di hati, takut si Zen malah kebablasan saking semangatnya.

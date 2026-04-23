@@ -1,3 +1,5 @@
+## The Selection
+
 The Grand Hall of Sunspear Palace was bathed in the blinding light of the midday sun, a stark contrast to the cold dread settling in Elara's stomach. Hundreds of girls, all adorned in fine silks and shimmering with innate magical auras, stood in tense silence.
 
 Elara stood near the back, wearing a simple linen dress, feeling entirely out of place. She possessed no aura. No spark of elemental affinity. In a kingdom that valued magical prowess above all else, she was an anomaly. A blank slate.

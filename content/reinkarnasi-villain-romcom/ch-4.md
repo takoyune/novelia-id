@@ -1,3 +1,5 @@
+## Logika Dunia Ini
+
 Setelah menyaksikan pemandangan ala komedi romantis di dalam kelas, pelajaran pun dimulai seolah tidak terjadi apa-apa.
 
 Meski aku tidak membawa buku dari rumah, ternyata laci meja dan lokerku sudah penuh dengan buku paket dan catatan, jadi aku tidak sampai ketinggalan pelajaran. Namun, rasa lega itu cuma bertahan sebentar. Aku baru sadar kalau duduk di kelas sebagai seorang "antagonis" itu rasanya sangat tidak nyaman.

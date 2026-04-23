@@ -1,3 +1,5 @@
+## Sang Antagonis
+
 Karakter "preman antagonis" yang muncul di komedi romantis—itu adalah sosok menyedihkan yang eksis cuma buat menonjolkan kehebatan si tokoh utama.
 
 Dalam cerita, peran mereka hanyalah muncul untuk dibanding-bandingkan dengan sang protagonis, lalu kalah telak tanpa ampun demi menghibur pembaca.

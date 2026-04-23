@@ -1,3 +1,5 @@
+## Wanita Berjubah Part 1
+
 Setelah secara ajaib berhasil memukul mundur tiga penjahat tadi dan puas dengan narsisme dirinya sejenak, Shion mendekati si wanita dan menyapanya.
 
 "Anda tidak apa-apa?"

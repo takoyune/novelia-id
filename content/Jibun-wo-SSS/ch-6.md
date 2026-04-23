@@ -1,3 +1,5 @@
+## Guru Wali Kelas Part 2
+
 "Permisi."
 
 Saat Shion mengetuk pintu gudang dokumen staf pengajar dan masuk, dia melihat Restia, guru wali kelasnya, sedang menaiki tangga lipat sambil mengambil beberapa buku dari rak.
