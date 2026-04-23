@@ -111,6 +111,8 @@
     {
       "id": "reinkarnasi-villain-romcom",
       "title": "Reinkarnasi Jadi Villain Romcom, Aku Menikmati Masa Muda Bareng Heroine Oshi-ku",
+      "japaneseTitle": "ラブコメの悪役に転生した俺は、推しのヒロインと青春を楽しむ",
+      "RomanjiTitle": "Rabu Kome no Akuyaku ni Tensei shita Ore wa, Oshi no Hiroin to Seishun wo Tanoshimu",
       "cover": "assets/covers/1.jpg",
       "author": "Sora Chiaki (そらchiaki)",
       "artist": "Mmu",
@@ -192,7 +194,9 @@
     },
     {
       "id": "Majo-to-yohei",
-      "title": "Penyihir dan Tentara Bayaran (Majo To Yohei)",
+      "title": "Penyihir dan Tentara Bayaran",
+      "japaneseTitle": "魔女と傭兵",
+      "RomanjiTitle": "Majo to Yōhei",
       "cover": "assets/covers/Majo-to-yohei.jpg",
       "author": "Chohokiteki Kaeru",
       "artist": "Kanase Bench",
@@ -274,6 +278,8 @@
     {
       "id": "Death-Flag",
       "title": "Death Flag-ku Nggak Ada Habisnya",
+      "japaneseTitle": "俺の死亡フラグが留まるところを知らない",
+      "RomanjiTitle": "Ore no Shibou Flag ga Todomaru Tokoro wo Shiranai",
       "cover": "assets/covers/Death-Flag.jpg",
       "author": "泉 (Izumi)",
       "artist": "Aちき",
@@ -359,6 +365,6 @@
   ],
   "meta": {
     "totalNovels": 6,
-    "lastUpdated": "2026-04-22T17:32:07.116Z"
+    "lastUpdated": "2026-04-23T05:55:51.832Z"
   }
 }

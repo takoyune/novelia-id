@@ -27,6 +27,7 @@ export function renderNovelCard(novel) {
             </div>
             <div class="card-content">
                 <h3 class="card-title">${novel.title}</h3>
+                ${novel.japaneseTitle ? `<p class="card-subtitle">${novel.japaneseTitle}</p>` : ''}
                 <p class="card-author">${novel.author}</p>
                 
                 <div class="genre-tags" style="margin-bottom: 0.5rem;">

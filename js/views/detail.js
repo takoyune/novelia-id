@@ -39,9 +39,17 @@ export default class DetailView {
                     
                     <div class="detail-info">
                         <h1 class="detail-title">${this.novel.title}</h1>
+                        ${this.novel.japaneseTitle ? `
+                            <div class="detail-alt-titles">
+                                <span class="alt-title-jp">${this.novel.japaneseTitle}</span>
+                                ${this.novel.RomanjiTitle ? `<span class="alt-title-romaji">${this.novel.RomanjiTitle}</span>` : ''}
+                            </div>
+                        ` : ''}
                         <div class="detail-meta">
                             <span><i class="fas fa-pen text-accent"></i> ${this.novel.author}</span>
+                            ${this.novel.artist ? `<span><i class="fas fa-paint-brush text-accent"></i> ${this.novel.artist}</span>` : ''}
                             <span><i class="fas fa-language text-accent"></i> ${this.novel.translator}</span>
+                            ${this.novel.year ? `<span><i class="fas fa-calendar text-accent"></i> ${this.novel.year}</span>` : ''}
                             <span><i class="fas fa-star text-rating-star" style="color: var(--rating-star);"></i> ${this.novel.rating}</span>
                             <span class="status-badge ${this.novel.status === 'Ongoing' ? 'status-ongoing' : 'status-completed'}" style="position: static;">${this.novel.status}</span>
                         </div>
