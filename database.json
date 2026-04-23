@@ -215,61 +215,61 @@
       "chapters": [
         {
           "id": "ch-1",
-          "title": "Chapter 1",
+          "title": "",
           "index": 1,
           "date": "2026-04-23"
         },
         {
           "id": "ch-2",
-          "title": "Chapter 2",
+          "title": "",
           "index": 2,
           "date": "2026-04-23"
         },
         {
           "id": "ch-3",
-          "title": "Chapter 3",
+          "title": "",
           "index": 3,
           "date": "2026-04-23"
         },
         {
           "id": "ch-4",
-          "title": "Chapter 4",
+          "title": "",
           "index": 4,
           "date": "2026-04-23"
         },
         {
           "id": "ch-5",
-          "title": "Chapter 5",
+          "title": "",
           "index": 5,
           "date": "2026-04-23"
         },
         {
           "id": "ch-6",
-          "title": "Chapter 6",
+          "title": "",
           "index": 6,
           "date": "2026-04-23"
         },
         {
           "id": "ch-7",
-          "title": "Chapter 7",
+          "title": "",
           "index": 7,
           "date": "2026-04-23"
         },
         {
           "id": "ch-8",
-          "title": "Chapter 8",
+          "title": "",
           "index": 8,
           "date": "2026-04-23"
         },
         {
           "id": "ch-9",
-          "title": "Chapter 9",
+          "title": "",
           "index": 9,
           "date": "2026-04-23"
         },
         {
           "id": "ch-10",
-          "title": "Chapter 10",
+          "title": "",
           "index": 10,
           "date": "2026-04-23"
         }
@@ -301,61 +301,61 @@
       "chapters": [
         {
           "id": "ch-1",
-          "title": "Chapter 1",
+          "title": "",
           "index": 1,
           "date": "2026-04-23"
         },
         {
           "id": "ch-2",
-          "title": "Chapter 2",
+          "title": "",
           "index": 2,
           "date": "2026-04-23"
         },
         {
           "id": "ch-3",
-          "title": "Chapter 3",
+          "title": "",
           "index": 3,
           "date": "2026-04-23"
         },
         {
           "id": "ch-4",
-          "title": "Chapter 4",
+          "title": "",
           "index": 4,
           "date": "2026-04-23"
         },
         {
           "id": "ch-5",
-          "title": "Chapter 5",
+          "title": "",
           "index": 5,
           "date": "2026-04-23"
         },
         {
           "id": "ch-6",
-          "title": "Chapter 6",
+          "title": "",
           "index": 6,
           "date": "2026-04-23"
         },
         {
           "id": "ch-7",
-          "title": "Chapter 7",
+          "title": "",
           "index": 7,
           "date": "2026-04-23"
         },
         {
           "id": "ch-8",
-          "title": "Chapter 8",
+          "title": "",
           "index": 8,
           "date": "2026-04-23"
         },
         {
           "id": "ch-9",
-          "title": "Chapter 9",
+          "title": "",
           "index": 9,
           "date": "2026-04-23"
         },
         {
           "id": "ch-10",
-          "title": "Chapter 10",
+          "title": "",
           "index": 10,
           "date": "2026-04-23"
         }
@@ -544,6 +544,6 @@
   ],
   "meta": {
     "totalNovels": 7,
-    "lastUpdated": "2026-04-23T07:22:40.844Z"
+    "lastUpdated": "2026-04-23T07:57:12.977Z"
   }
 }

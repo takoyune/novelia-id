@@ -46,7 +46,7 @@ try {
 
             // Fallback title if empty
             if (!title) {
-                title = `Chapter ${chNum}`;
+                title = ``;
             }
 
             // Get file modification date for the chapter date

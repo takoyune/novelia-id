@@ -240,7 +240,7 @@ export default class DetailView {
                 <a href="#/novel/${this.novel.id}/${ch.id}" class="chapter-item ${isRead ? 'read' : ''}">
                     ${isRead ? '<i class="fas fa-check-circle read-check"></i>' : ''}
                     <div class="flex-1 min-w-0">
-                        <div class="chapter-title font-medium truncate">Chapter ${ch.index}: ${ch.title}</div>
+                        <div class="chapter-title font-medium truncate">Chapter ${ch.index}${ch.title ? ': ' + ch.title : ''}</div>
                         <div class="text-xs text-muted mt-1">${dateStr}</div>
                     </div>
                 </a>

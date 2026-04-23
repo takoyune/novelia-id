@@ -85,7 +85,7 @@ export default class ReaderView {
 
                 <!-- Main Content Area -->
                 <main id="reader-content-area" class="reader-content">
-                    <h1 class="text-2xl md:text-4xl font-bold mb-8 text-center">${this.chapter.title}</h1>
+                    <h1 class="text-2xl md:text-4xl font-bold mb-8 text-center">${this.chapter.title || `Chapter ${this.chapter.index}`}</h1>
                     <div class="content-body">
                         ${htmlContent}
                     </div>
