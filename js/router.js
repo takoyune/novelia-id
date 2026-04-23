@@ -118,30 +118,33 @@ class Router {
     }
 
     _syncUrlToFilters(queryParams) {
-        if (Object.keys(queryParams).length === 0) return;
-
-        const currentFilters = store.getState('filters');
-        let filtersUpdated = false;
+        // If navigating to home with NO query params, reset all filters
+        if (Object.keys(queryParams).length === 0) {
+            store.setNestedState('filters', 'search', '');
+            store.setNestedState('filters', 'genres', []);
+            store.setNestedState('filters', 'status', 'All');
+            store.setNestedState('filters', 'sort', 'Latest Update');
+            // Also clear the search input if it exists
+            const searchInput = document.getElementById('global-search');
+            if (searchInput) searchInput.value = '';
+            return;
+        }
 
         if (queryParams.genre) {
             const genres = Array.isArray(queryParams.genre) ? queryParams.genre : [queryParams.genre];
             store.setNestedState('filters', 'genres', genres);
-            filtersUpdated = true;
         }
 
         if (queryParams.status) {
             store.setNestedState('filters', 'status', queryParams.status);
-            filtersUpdated = true;
         }
 
         if (queryParams.sort) {
             store.setNestedState('filters', 'sort', queryParams.sort);
-            filtersUpdated = true;
         }
         
         if (queryParams.q) {
             store.setNestedState('filters', 'search', queryParams.q);
-            filtersUpdated = true;
         }
     }
 
