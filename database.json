@@ -1,114 +1,6 @@
 {
   "novels": [
     {
-      "id": "the-legendary-mechanic",
-      "title": "The Legendary Mechanic",
-      "cover": "assets/covers/mechanic.webp",
-      "author": "Chocolion",
-      "translator": "Novelia ID Team",
-      "rating": 4.8,
-      "genres": [
-        "Action",
-        "Sci-Fi",
-        "Fantasy"
-      ],
-      "status": "Ongoing",
-      "synopsis": "What do you do when you wake up and find yourself inside the very game that you loved? What do you do when you realize you not only have become an NPC - you have even been thrown back in time to before the game even launched! What will happen when our protagonist's two realities intersect?\n\nHan Xiao was a professional power leveler before his transmigration. Using his past life's knowledge, Han Xiao sweeps through the universe as he prepares for the arrival of the players. This is definitely not your typical transmigration novel.",
-      "lastUpdated": "2025-01-15T10:00:00Z",
-      "chapters": [
-        {
-          "id": "ch-1",
-          "title": "Rebirth",
-          "index": 1,
-          "date": "2026-04-23"
-        },
-        {
-          "id": "ch-2",
-          "title": "First Contact",
-          "index": 2,
-          "date": "2026-04-23"
-        },
-        {
-          "id": "ch-3",
-          "title": "The Escape",
-          "index": 3,
-          "date": "2026-04-23"
-        }
-      ]
-    },
-    {
-      "id": "moonlit-serenade",
-      "title": "Moonlit Serenade",
-      "cover": "assets/covers/moonlit.webp",
-      "author": "Lumiere",
-      "translator": "Novelia ID Team",
-      "rating": 4.5,
-      "genres": [
-        "Romance",
-        "Fantasy",
-        "Drama"
-      ],
-      "status": "Completed",
-      "synopsis": "Elara, a girl with no magic in a kingdom where magic is everything, is chosen to be the bride of the mysterious and feared Lord of the Night, Kaelen. Rumors say he is a monster, a cruel tyrant who rules over the shadowy realm of Nocturne.\n\nBut when Elara arrives at his moonlit castle, she discovers that the rumors are far from the truth. Kaelen is cursed, bound by an ancient spell that slowly consumes his humanity. Only a heart untouched by magic can break the curse. \n\nAs Elara navigates the treacherous politics of the Night Court and uncovers the secrets of Kaelen's past, she realizes that her lack of magic might be her greatest strength.",
-      "lastUpdated": "2025-01-10T15:30:00Z",
-      "chapters": [
-        {
-          "id": "ch-1",
-          "title": "The Selection",
-          "index": 1,
-          "date": "2026-04-23"
-        },
-        {
-          "id": "ch-2",
-          "title": "Journey to Nocturne",
-          "index": 2,
-          "date": "2026-04-23"
-        },
-        {
-          "id": "ch-3",
-          "title": "The Silver Mask",
-          "index": 3,
-          "date": "2026-04-23"
-        }
-      ]
-    },
-    {
-      "id": "throne-of-shadows",
-      "title": "Throne of Shadows",
-      "cover": "assets/covers/shadows.webp",
-      "author": "Grimdark Ink",
-      "translator": "Novelia ID Team",
-      "rating": 4.9,
-      "genres": [
-        "Dark Fantasy",
-        "Isekai",
-        "Action"
-      ],
-      "status": "Ongoing",
-      "synopsis": "Death was supposed to be the end. But for Arthur Pendelton, a ruthless corporate liquidator, it was merely a change of management.\n\nReborn into a brutal world of sword and sorcery as the heir to a fallen, disgraced demonic bloodline, Arthur finds himself at the bottom of a very deadly food chain. The Empire of Light has purged his kin, and the surviving remnants cower in the deep underdark.\n\nArmed with his cunning, an absolute lack of moral constraints, and a unique system that feeds on the souls of his enemies, Arthur sets out to reclaim his birthright. He won't just rebuild his house; he will cast the entire world into shadow.\n\nHe is no hero. He is the villain this world deserves.",
-      "lastUpdated": "2025-01-20T08:45:00Z",
-      "chapters": [
-        {
-          "id": "ch-1",
-          "title": "Corporate Restructuring",
-          "index": 1,
-          "date": "2026-04-23"
-        },
-        {
-          "id": "ch-2",
-          "title": "Asset Acquisition",
-          "index": 2,
-          "date": "2026-04-23"
-        },
-        {
-          "id": "ch-3",
-          "title": "Hostile Takeover",
-          "index": 3,
-          "date": "2026-04-23"
-        }
-      ]
-    },
-    {
       "id": "reinkarnasi-villain-romcom",
       "title": "Reinkarnasi Jadi Villain Romcom, Aku Menikmati Masa Muda Bareng Heroine Oshi-ku",
       "japaneseTitle": "ラブコメの悪役に転生した俺は、推しのヒロインと青春を楽しむ",
@@ -735,7 +627,7 @@
     }
   ],
   "meta": {
-    "totalNovels": 7,
-    "lastUpdated": "2026-04-23T11:25:13.873Z"
+    "totalNovels": 4,
+    "lastUpdated": "2026-04-23T12:31:17.781Z"
   }
 }
