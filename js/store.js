@@ -119,12 +119,14 @@ class Store {
     getFilteredNovels() {
         let { novels, filters } = this.state;
         
-        // 1. Search
+        // 1. Search (matches title, Japanese title, romaji, and author)
         if (filters.search) {
             const query = filters.search.toLowerCase();
             novels = novels.filter(n => 
                 n.title.toLowerCase().includes(query) || 
-                n.author.toLowerCase().includes(query)
+                n.author.toLowerCase().includes(query) ||
+                (n.japaneseTitle && n.japaneseTitle.toLowerCase().includes(query)) ||
+                (n.RomanjiTitle && n.RomanjiTitle.toLowerCase().includes(query))
             );
         }
 
