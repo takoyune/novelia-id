@@ -297,6 +297,7 @@
         "Shounen"
       ],
       "status": "Ongoing",
+      "Type": "Web Novel",
       "synopsis": "Kazuki Hirasawa, seorang mahasiswa biasa yang bisa kamu temui di mana saja, tiba-tiba sadar kalau dirinya telah merasuki seorang karakter di dalam game. Parahnya lagi, ia merasuki Harold Stokes—salah satu karakter paling dibenci di cerita tersebut hingga diberi julukan \"Raja Bajingan\" oleh para player. \n\n Di sekelilingnya, ada begitu banyak ranjau darat berupa death flag yang siap meledak kapan saja! Kira-kira, bisakah Kazuki menghindari tumpukan death flag yang menggunung itu dan berhasil mencapai rute survival?!",
       "lastUpdated": "2026-04-22T23:24:00Z",
       "chapters": [
@@ -361,10 +362,190 @@
           "date": "2026-04-22"
         }
       ]
+    },
+    {
+      "id": "Jibun-wo-SSS",
+      "title": "Mahasiswa Sihir Tingkat C yang Menganggap Dirinya Tingkat SSS",
+      "japaneseTitle": "自分をSSS級だと思い込んでいるC級魔術学生",
+      "RomanjiTitle": "Jibun wo SSS-kyū da to Omoikondeiru C-kyū Majutsu Gakusei",
+      "cover": "assets/covers/C.jpg",
+      "author": "Nkmr",
+      "artist": "N/A",
+      "year": "2018",
+      "translator": "Novelia ID Team",
+      "rating": 3.3,
+      "genres": [
+        "Action",
+        "Adventure",
+        "Fantasy",
+        "Comedy"
+      ],
+      "status": "Ongoing",
+      "Type": "Web Novel",
+      "synopsis": "\"Naga terkuat di dunia? ...... Ya ampun, kurasa ini giliranku, ya.\" ── Si pengidap Chuunibyou garis keras, turun tangan.\n\nBayangkan sebuah kisah pahlawan di mana seseorang dengan kekuatan kelas dunia memilih untuk \"tidak ingin menonjol\", \"ingin hidup tenang\", atau \"punya alasan tertentu untuk menyembunyikan kekuatannya\". Dia menjalani hidup dengan merendah, namun di saat kritis, dia akan melepaskan kekuatannya yang luar biasa untuk menyelamatkan orang-orang dari ancaman besar.\n\nTapi, bagaimana kalau tokoh utama dalam cerita semacam itu \"sebenarnya tidak punya kekuatan sama sekali\"?\n\nDi hadapan kakak kelas yang menindas kaum lemah, di hadapan putri raja yang dikejar pembunuh bayaran, atau di hadapan naga terkuat di dunia yang menyerang akademi....\n\nBagaimana jika dalam situasi genting seperti itu, yang muncul justru adalah \"seorang mahasiswa sihir yang bertingkah seolah-olah sedang menyembunyikan kekuatan, padahal aslinya cuma punya kemampuan tingkat C\"?\n\nInilah kisah tentang seorang mahasiswa sihir tingkat C yang mabuk kepayang dengan lagaknya sendiri, yang seolah-olah ingin berteriak kepada dunia,\"Sebenarnya aku ini punya kekuatan rahasia, lho.\"",
+      "lastUpdated": "2026-04-23T07:35:13Z",
+      "chapters": [
+        {
+          "id": "ch-1",
+          "title": "Ujian Praktik",
+          "index": 1,
+          "date": "2026-04-23"
+        },
+        {
+          "id": "ch-2",
+          "title": "Shion Kurosaki part 1",
+          "index": 2,
+          "date": "2026-04-23"
+        },
+        {
+          "id": "ch-3",
+          "title": "Shion Kurosaki part 2",
+          "index": 3,
+          "date": "2026-04-23"
+        },
+        {
+          "id": "ch-4",
+          "title": "Berangkat Sekolah",
+          "index": 4,
+          "date": "2026-04-23"
+        },
+        {
+          "id": "ch-5",
+          "title": "Guru Wali Kelas Part 1",
+          "index": 5,
+          "date": "2026-04-23"
+        },
+        {
+          "id": "ch-6",
+          "title": "Guru Wali Kelas Part 2",
+          "index": 6,
+          "date": "2026-04-23"
+        },
+        {
+          "id": "ch-7",
+          "title": "Kilatan Mata Merah di Malam Gelap Part 1",
+          "index": 7,
+          "date": "2026-04-23"
+        },
+        {
+          "id": "ch-8",
+          "title": "Kilatan Mata Merah di Malam Gelap Part 2",
+          "index": 8,
+          "date": "2026-04-23"
+        },
+        {
+          "id": "ch-9",
+          "title": "Wanita Berjubah Part 1",
+          "index": 9,
+          "date": "2026-04-23"
+        },
+        {
+          "id": "ch-10",
+          "title": "Wanita Berjubah Part 2",
+          "index": 10,
+          "date": "2026-04-23"
+        },
+        {
+          "id": "ch-11",
+          "title": "Wanita Berjubah Part 3",
+          "index": 11,
+          "date": "2026-04-23"
+        },
+        {
+          "id": "ch-12",
+          "title": "Laga Simulasi",
+          "index": 12,
+          "date": "2026-04-23"
+        },
+        {
+          "id": "ch-13",
+          "title": "Dewa Penghancur Kegelapan Part 1",
+          "index": 13,
+          "date": "2026-04-23"
+        },
+        {
+          "id": "ch-14",
+          "title": "Dewa Penghancur Kegelapan Part 2",
+          "index": 14,
+          "date": "2026-04-23"
+        },
+        {
+          "id": "ch-15",
+          "title": "Peringkat Ketiga Angkatan vs Mahasiswa Sihir Tingkat C Part 1",
+          "index": 15,
+          "date": "2026-04-23"
+        },
+        {
+          "id": "ch-16",
+          "title": "Peringkat Ketiga Angkatan vs Mahasiswa Sihir Tingkat C Part 2",
+          "index": 16,
+          "date": "2026-04-23"
+        },
+        {
+          "id": "ch-17",
+          "title": "Penyelesaian, dan Kemenangan Part 1",
+          "index": 17,
+          "date": "2026-04-23"
+        },
+        {
+          "id": "ch-18",
+          "title": "Penyelesaian, dan Kemenangan Part 2",
+          "index": 18,
+          "date": "2026-04-23"
+        },
+        {
+          "id": "ch-19",
+          "title": "Restia Panik",
+          "index": 19,
+          "date": "2026-04-23"
+        },
+        {
+          "id": "ch-20",
+          "title": "Malam Setelah Duel",
+          "index": 20,
+          "date": "2026-04-23"
+        },
+        {
+          "id": "ch-21",
+          "title": "Eliza Rawred Part 1",
+          "index": 21,
+          "date": "2026-04-23"
+        },
+        {
+          "id": "ch-22",
+          "title": "Eliza Rawred Part 2",
+          "index": 22,
+          "date": "2026-04-23"
+        },
+        {
+          "id": "ch-23",
+          "title": "Alphonse von Fried Part 1",
+          "index": 23,
+          "date": "2026-04-23"
+        },
+        {
+          "id": "ch-24",
+          "title": "Alphonse von Fried Part 2",
+          "index": 24,
+          "date": "2026-04-23"
+        },
+        {
+          "id": "ch-25",
+          "title": "Penyerangan Part 1",
+          "index": 25,
+          "date": "2026-04-23"
+        },
+        {
+          "id": "ch-26",
+          "title": "Penyerangan Part 2",
+          "index": 26,
+          "date": "2026-04-23"
+        }
+      ]
     }
   ],
   "meta": {
-    "totalNovels": 6,
-    "lastUpdated": "2026-04-23T06:03:25.375Z"
+    "totalNovels": 7,
+    "lastUpdated": "2026-04-23T06:55:14.402Z"
   }
 }
